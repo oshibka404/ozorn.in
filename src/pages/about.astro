@@ -1,5 +1,10 @@
 ---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 
+
+const pageTitle = "About Me";
 ---
 
 <html lang="en">
@@ -8,35 +13,32 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Andrey Ozornin</title>
+		<title>{pageTitle}</title>
+        <style>
+            h1 {
+              color: purple;
+              font-size: 4rem;
+            }
+          </style>
+      
 	</head>
     <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
-        <h1>Andrey Ozornin</h1>
+        <Navigation />
+        <h1>{pageTitle}</h1>
         <p>
-            Hi! I'm Andrey. I'm a software engineer and I love building things for the web. I'm currently working on diagramming at <a href="https://miro.com">Miro</a> as a front end developer.
+            Hi! I'm Andrey. I'm a software engineer and I love building things for the web. My full-time job is <a href="https://miro.com">Miro</a> where I am a front end developer working on diagramming. Also, I worked at Booking.com, Genestack, Wrike and Yandex.
         </p>
         <p> 
-            I believe in web. We're here to solve problems of the real world and make it better, not worse.
+            I believe in web. Web is the most open and the most DIY friendly of all platforms. It makes information equally accessible from anywhere in the world. It is democratic in the best possible way and anyone can contribute to it. Many governamental and international institutions could learn from the web.
         </p>
         <p>
             Also, I am a musician. I make pensive electronica as Three Colored Squares and some easygoing French house as Bel Avenir.
         </p>
+
+        <Footer />
+        
         <p>
-            You can connect with me via email (preferably) or on social platforms:
-            <br/>
-            Telegram
-            <br/>
-            LinkedIn
-            <br/>
-            GitHub
-            <br/>
-            SoundCloud
-        </p>
-        <p>
-            You can't find me on Twitter, Facebook or Instagram. I have accounts there but I don't use them and I think you shouldn't either.
+            You can't find me on Twitter/X, Facebook or Instagram. I have accounts there but I don't use them and I don't think you should either.
         </p>
     </body>
 </html>

@@ -1,0 +1,29 @@
+---
+const socials = [
+    {
+        name: "Telegram",
+        link: "https://t.me/oshibka404"
+    },
+    {
+        name: "LinkedIn",
+        link: "https://www.linkedin.com/in/oshibka404/"
+    },
+    {
+        name: "GitHub",
+        link: "https://github.com/oshibka404"
+    },
+    {
+        name: "SoundCloud",
+        link: "https://soundcloud.com/ozornin"
+    }
+]
+---
+
+<p>
+    <a href="mailto:andrey@ozorn.in">Email me</a> or contact me on:
+    <ul>
+    {socials.map(social => (
+        <li class="skill"><a href={social.link}>{social.name}</a></li>
+    ))}
+    </ul>
+</p>

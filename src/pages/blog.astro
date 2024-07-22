@@ -1,5 +1,7 @@
 ---
-
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -11,11 +13,17 @@
 		<title>My Blog</title>
 	</head>
 <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <Navigation />
   
     <h1>My Blog</h1>
     <p>This is where I will post about programming, music and life in general</p>
+
+    <ul>
+        <li><a href="/posts/sample-post/">Sample post</a></li>
+        <li><a href="/posts/post-2/">Post 2</a></li>
+        <li><a href="/posts/post-3/">Post 3</a></li>
+    </ul>
+
+    <Footer />
   </body>
   
