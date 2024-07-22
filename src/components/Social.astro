@@ -1,0 +1,30 @@
+---
+const { platform, link } = Astro.props;
+
+const linkColor = {
+    "soundcloud": "#F26F23",
+    "github": "black",
+    "telegram": "#27A7E7",
+    "linkedin": "#0A66C2"
+}[(platform as string).toLowerCase()] ?? "initial"
+---
+<a href={link}>{platform}</a>
+
+<style define:vars={{linkColor}}>
+    a:link, a:visited {
+        padding: 0.2rem 0.5rem;
+        background-color: transparent;
+        color: var(--linkColor);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: white;
+        background-color: var(--linkColor);
+    }
+
+    a:active {
+        filter: invert();
+    }
+</style>
+  

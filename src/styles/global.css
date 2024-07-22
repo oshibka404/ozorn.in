@@ -19,3 +19,23 @@ h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
 }
+
+/* nav styles */
+
+.nav-links {
+    a {
+        transition: all .2s;
+    }
+    a:link, a:visited {
+        color: blue;
+    }
+
+    a:hover,
+    a:focus {
+        color: green
+    }
+
+    a:active {
+        color: red
+    }
+}
