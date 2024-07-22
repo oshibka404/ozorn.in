@@ -1,4 +1,6 @@
 ---
+import Social from "./Social.astro"
+
 const socials = [
     {
         name: "Telegram",
@@ -23,7 +25,9 @@ const socials = [
     <a href="mailto:andrey@ozorn.in">Email me</a> or contact me on:
     <ul>
     {socials.map(social => (
-        <li class="skill"><a href={social.link}>{social.name}</a></li>
+        <li class="skill">
+            <Social link={social.link} platform={social.name} />
+        </li>
     ))}
     </ul>
 </p>

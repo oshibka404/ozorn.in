@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+const title = "My Blog"
 ---
 
 <html lang="en">
@@ -10,12 +11,12 @@ import Footer from '../components/Footer.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>My Blog</title>
+		<title>{title}</title>
 	</head>
 <body>
     <Navigation />
   
-    <h1>My Blog</h1>
+    <h1>{title}</h1>
     <p>This is where I will post about programming, music and life in general</p>
 
     <ul>
