@@ -10,7 +10,7 @@ import { SITE_TITLE } from '../consts';
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/links">Links</HeaderLink>
 		</div>
 		<SocialLinks />
 	</nav>
@@ -41,6 +41,12 @@ import { SITE_TITLE } from '../consts';
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
+	}
+	nav a:hover {
+		color: var(--accent-dark);
+	}
+	nav a:active {
+		color: var(--red);
 	}
 	nav a.active {
 		text-decoration: none;
