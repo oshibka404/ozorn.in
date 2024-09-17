@@ -4,6 +4,7 @@ description: 'How we reducing the feedback loop by dogfooding a feature with an 
 pubDate: 'Jul 22 2024'
 original: 'https://medium.com/miro-engineering/how-to-create-fake-back-end-using-indexeddb-388d6f266eb0'
 heroImage: '/fake-backend-indexed-db.webp'
+license: 'prop'
 ---
 
 Long story short, we (Diagramming team at Miro) are shipping custom shape libraries soon. Users will be able to create their own shape packs, upload SVG icons into them, share the packs with their respective organisations and use the icons for advanced diagramming exactly in the same way as they use the native Miro shapes (e.g. AWS, Cisco, Salesforce, etc.). We've created an early iteration of the feature with fake CRUD back-end fully implemented on client-side and hereunder I'll tell how we did it and how it improved the feature delivery time.
