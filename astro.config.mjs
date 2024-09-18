@@ -17,5 +17,7 @@ export default defineConfig({
 		'/quit-day-3/': '/blog/quit-smoking-2',
 		'/quit-2w/': '/blog/quit-smoking-3',
 		'/propaganda/': '/blog/propaganda',
+		'/antimat/': '/blog/no-swearing-browser-extension',
+		'/nth-digit-of-pi/': '/blog/nth-digit-of-pi',
 	}
 });
