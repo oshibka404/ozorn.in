@@ -19,5 +19,7 @@ export default defineConfig({
 		'/propaganda/': '/blog/propaganda',
 		'/antimat/': '/blog/no-swearing-browser-extension',
 		'/nth-digit-of-pi/': '/blog/nth-digit-of-pi',
+		'/konung-vyiebal-ovtsu/': '/blog/konung',
+		'/necropolis/': '/blog/necropolis',
 	}
 });
