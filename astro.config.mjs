@@ -21,5 +21,7 @@ export default defineConfig({
 		'/nth-digit-of-pi/': '/blog/nth-digit-of-pi',
 		'/konung-vyiebal-ovtsu/': '/blog/konung',
 		'/necropolis/': '/blog/necropolis',
+		'/js-performance-xakep/': '/blog/js-performance-xakep',
+		'/elementary-cellular-automata/': '/blog/elementary-cellular-automata',
 	}
 });
