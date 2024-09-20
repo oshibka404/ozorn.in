@@ -12,7 +12,9 @@ import { SITE_TITLE } from '../consts';
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/links">Links</HeaderLink>
 		</div>
-		<SocialLinks />
+		<div class="social-links-wrapper">
+			<SocialLinks />
+		</div>
 	</nav>
 </header>
 <style>
@@ -51,5 +53,10 @@ import { SITE_TITLE } from '../consts';
 	nav a.active {
 		text-decoration: none;
 		border-bottom-color: var(--accent);
+	}
+	@media (max-width: 720px) {
+		.social-links-wrapper {
+			display: none;
+		}
 	}
 </style>
