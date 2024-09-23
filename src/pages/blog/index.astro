@@ -5,9 +5,10 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
+import type { BlogPostModel } from '../../types';
 
 const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+	(a: BlogPostModel, b: BlogPostModel) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
@@ -57,11 +58,15 @@ const posts = (await getCollection('blog')).sort(
 				color: rgb(var(--black));
 				line-height: 1;
 			}
+			.description {
+				color: rgb(var(--black));
+			}
 			.date {
 				margin: 0;
 				color: rgb(var(--gray));
 			}
 			ul li a:hover h4,
+			ul li a:hover .description,
 			ul li a:hover .date {
 				color: rgb(var(--accent));
 			}
@@ -91,7 +96,7 @@ const posts = (await getCollection('blog')).sort(
 			<section>
 				<ul>
 					{
-						posts.map((post) => (
+						posts.map((post: BlogPostModel) => (
 							<li>
 								<a href={`/blog/${post.slug}/`}>
 									{
@@ -99,6 +104,10 @@ const posts = (await getCollection('blog')).sort(
 										<img width={720} height={360} src={post.data.heroImage} alt="" />
 									}
 									<h4 class="title">{post.data.title}</h4>
+									{
+										post.data.description && 
+										<p class="description">{post.data.description}</p>
+									}
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />
 									</p>

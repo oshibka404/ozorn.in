@@ -1,6 +1,6 @@
 ---
 title: 'Etude in white and birch'
-description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
+description: 'It’s good here once you’ve accepted it and if you can afford it. You have and you can.'
 pubDate: 'Aug 19 2024'
 heroImage: '/etude-white-birch.png'
 original: 'https://medium.com/@oshibka404/etude-in-white-and-birch-d8f292f26a4c'
