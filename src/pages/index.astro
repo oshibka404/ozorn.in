@@ -15,12 +15,44 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<main>
 			<h1>🐗 Andrey Ozornin</h1>
 			<p>
-				Product Engineer at <a href="https://framer.com/">Framer</a>, Amsterdam. Previously at <a href="https://miro.com/">Miro</a>, <a href="https://booking.com/">Booking</a>, <a href="https://genestack.com/">Genestack</a>, <a href="https://wrike.com">Wrike</a>, <a href="https://yandex.com/">Yandex</a>. 
+				Product Engineer at <a href="https://framer.com/" class="framer-link">Framer</a>, Amsterdam. Previously at <a href="https://miro.com/" class="miro-link">Miro</a>, <a href="https://booking.com/" class="booking-link">Booking</a>, <a href="https://genestack.com/" class="genestack-link">Genestack</a>, <a href="https://wrike.com" class="wrike-link">Wrike</a>, <a href="https://yandex.com/" class="yandex-link">Yandex</a>. 
 			</p>
 			<p>
 				I code for web, write and make music.
 			</p>
 		</main>
+		<style>
+			a {
+				transition: all .25s;
+			}
+			.framer-link:hover {
+				color: white;
+				background-color: black;
+			}
+			.miro-link:hover {
+				color: black;
+				background-color: yellow;
+			}
+			.booking-link:hover {
+				color: white;
+				background-color: blue;
+			}
+			.genestack-link:hover {
+				color: white;
+				background-color: green;
+			}
+			.wrike-link:hover {
+				color: white;
+				background-color: green;
+			}
+			.yandex-link:hover {
+				color: black;
+				background-color: yellow;
+				&::first-letter {
+					color: red;
+				}
+			}
+		</style>
 		<Footer />
 	</body>
 </html>
