@@ -15,41 +15,81 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<main>
 			<h1>🐗 Andrey Ozornin</h1>
 			<p>
-				Product Engineer at <a href="https://framer.com/" class="framer-link">Framer</a>, Amsterdam. Previously at <a href="https://miro.com/" class="miro-link">Miro</a>, <a href="https://booking.com/" class="booking-link">Booking</a>, <a href="https://genestack.com/" class="genestack-link">Genestack</a>, <a href="https://wrike.com" class="wrike-link">Wrike</a>, <a href="https://yandex.com/" class="yandex-link">Yandex</a>. 
+				Product Engineer at <a href="https://framer.com/" class="company-link framer-link">Framer</a>, Amsterdam. 
+				Previously at
+				<a href="https://miro.com" class="company-link miro-link">Miro</a>, 
+				<a href="https://booking.com" class="company-link booking-link">Booking</a>, 
+				<a href="https://genestack.com" class="company-link genestack-link">Genestack</a>, 
+				<a href="https://wrike.com" class="company-link wrike-link">Wrike</a>, 
+				<a href="https://yandex.com" class="company-link yandex-link">Yandex</a>. 
 			</p>
 			<p>
 				I code for web, write and make music.
 			</p>
 		</main>
 		<style>
-			a {
+			.company-link {
+				position: relative;
+				transition: color .25s;
+				line-height: 1;
+			}
+			.company-link::before {
 				transition: all .25s;
+				content: '';
+				position: absolute;
+				background-color: inherit;
+				width: 100%;
+				height: 100%;
+				box-sizing: content-box;
+				padding: 0 4px;
+				margin-left: -4px;
+				top: 0;
+				left: 0;
+				border-radius: 50%;
+				transform: scale(.5, 0);
+				z-index: -1;
+			}
+			.company-link:hover::before {
+				border-radius: 0;
+				transform: scale(1);
 			}
 			.framer-link:hover {
 				color: white;
-				background-color: black;
+				&::before {
+					background-color: black;
+				}
 			}
 			.miro-link:hover {
 				color: black;
-				background-color: yellow;
+				&::before {
+					background-color: yellow;
+				}
 			}
 			.booking-link:hover {
 				color: white;
-				background-color: blue;
+				&::before {
+					background-color: blue;
+				}
 			}
 			.genestack-link:hover {
 				color: white;
-				background-color: green;
+				&::before {
+					background-color: green;
+				}
 			}
 			.wrike-link:hover {
 				color: white;
-				background-color: green;
+				&::before {
+					background-color: green;
+				}
 			}
 			.yandex-link:hover {
-				color: black;
-				background-color: yellow;
+				color: red;
+				&::before {
+					background-color: yellow;
+				}
 				&::first-letter {
-					color: red;
+					color: black;
 				}
 			}
 		</style>
