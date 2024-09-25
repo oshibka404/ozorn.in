@@ -1,0 +1,13 @@
+# _OOOO_______OOOO__
+# ___OO__________OO_
+# ___OO__________OO_
+# ___OOOOO_____OOO__
+# ___OO__OO___OO____
+# ___OO___O___OO____
+# ___OO__OO_________
+# ___OOOOO____OO____
+
+User-agents: *
+Disallow: /cdn-cgi/
+
+Sitemap: https://ozorn.in/sitemap-index.xml
