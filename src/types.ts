@@ -1,6 +1,6 @@
 export interface BlogPostData {
     pubDate: Date,
-    updatedDate: Date,
+    updatedDate?: Date,
     heroImage?: string,
     title: string,
     description?: string,

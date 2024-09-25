@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content';
+import License from '../components/License.astro';
 
 const blog = defineCollection({
 	type: 'content',
@@ -10,6 +11,8 @@ const blog = defineCollection({
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
+		license: z.string().optional(),
+		original: z.string().optional(),
 	}),
 });
 

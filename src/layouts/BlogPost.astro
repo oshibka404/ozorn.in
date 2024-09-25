@@ -20,12 +20,12 @@ const { title, description, pubDate, updatedDate, heroImage, license, original }
 			}
 			.hero-image {
 				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
+				& img {
+					display: block;
+					margin: 0 auto;
+					border-radius: 12px;
+					box-shadow: var(--box-shadow);
+				}
 			}
 			.prose {
 				width: 720px;
@@ -39,9 +39,9 @@ const { title, description, pubDate, updatedDate, heroImage, license, original }
 				padding: 1em 0;
 				text-align: center;
 				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
+				& h1 {
+					margin: 0 0 0.5em 0;
+				}
 			}
 			.date {
 				margin-bottom: 0.5em;
@@ -49,6 +49,13 @@ const { title, description, pubDate, updatedDate, heroImage, license, original }
 			}
 			.last-updated-on {
 				font-style: italic;
+			}
+			.metadata {
+				font-size: .8em;
+				color: rgb(var(--gray-dark));
+				display: flex;
+				width: 100%;
+				justify-content: space-around;
 			}
 		</style>
 	</head>
@@ -58,7 +65,7 @@ const { title, description, pubDate, updatedDate, heroImage, license, original }
 		<main>
 			<article>
 				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+					{heroImage && <img width={1020} height={510} src={heroImage} alt={description} />}
 				</div>
 				<div class="prose">
 					<div class="title">
@@ -75,7 +82,7 @@ const { title, description, pubDate, updatedDate, heroImage, license, original }
 						<h1>{title}</h1>
 						<div class="metadata">
 							{license && <License license={license} />}
-							{original && <a href={original}>original</a>}
+							{original && <span>First published at <a href={original}>{(new URL(original)).hostname}</a></span>}
 						</div>
 						<hr />
 					</div>
