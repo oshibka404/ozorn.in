@@ -5,10 +5,9 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
-import type { BlogPostModel } from '../../types';
 
 const posts = (await getCollection('blog')).sort(
-	(a: BlogPostModel, b: BlogPostModel) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
@@ -96,7 +95,7 @@ const posts = (await getCollection('blog')).sort(
 			<section>
 				<ul>
 					{
-						posts.map((post: BlogPostModel) => (
+						posts.map((post) => (
 							<li>
 								<a href={`/blog/${post.slug}/`}>
 									{
