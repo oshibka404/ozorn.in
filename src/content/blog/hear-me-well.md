@@ -5,6 +5,7 @@ pubDate: 'Jul 10 2024'
 heroImage: '/hear-me-well.webp'
 original: 'https://medium.com/@oshibka404/hi-can-you-hear-me-well-88f92c09785a'
 license: 'cc'
+lang: 'en'
 ---
 
 And now? Ah, good. I see everyone is already here. Sorry for making you wait; there was an overlap with another meeting. My schedule has been packed lately. I hope it wasn’t too much trouble. So, to the essence:

@@ -5,6 +5,7 @@ pubDate: 'Aug 19 2024'
 heroImage: '/etude-white-birch.png'
 original: 'https://medium.com/@oshibka404/etude-in-white-and-birch-d8f292f26a4c'
 license: 'cc'
+lang: 'en'
 ---
 
 Colourful suitcases and plastic-wrapped backpacks slowly pass by, while the baggage belt is gently tapping its fast, repetitive rhythm. The big white number on a concrete pillar confirms that you’re in the right place. You look around. People are either texting their friends and relatives or pensively gazing at the conveyor. None of them are here in the full meaning of the word. You can’t see anyone talking, but you constantly hear a barely distinct murmur reflected from every wall in the hall at the same time. The ceiling is quite high, and you see a couple of rotating fans, but it is still a little stuffy.

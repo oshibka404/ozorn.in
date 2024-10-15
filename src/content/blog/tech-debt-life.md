@@ -5,6 +5,7 @@ pubDate: 'Jul 05 2024'
 heroImage: '/tech-debt-life.webp'
 original: 'https://medium.com/@oshibka404/the-technical-debt-of-life-d3e165700ac6'
 license: 'cc'
+lang: 'en'
 ---
 The idea of technical debt is easy to explain even to a non-techie. You need to do things right but you postpone it to achieve something else. You still must do it eventually, otherwise everything will fall apart, and the later you get to do it, the harder it gets. The concept of debt is so easy to grasp that we even bring it up to explain the necessity behaving morally right.
 

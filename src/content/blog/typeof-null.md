@@ -4,6 +4,7 @@ description: "Why typeof null === 'object'?"
 pubDate: 'Feb 10 2014'
 original: 'https://habr.com/en/articles/200664/'
 license: 'cc'
+lang: 'ru'
 ---
 
 Все JavaScript-программисты давно привыкли к тому, что `typeof null === 'object'; // true`, хотя фактически `null` — примитивное значение. Многие знают, что это баг, и лично Брэндан Айк это [признает](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null). Этот баг, вероятно, никогда не будет исправлен из-за необходимости сохранения обратной совместимости существующего кода с новыми версиями языка.

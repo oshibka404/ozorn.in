@@ -5,6 +5,7 @@ pubDate: 'Jul 8 2024'
 heroImage: '/how-to-snob.png'
 original: 'https://medium.com/long-sweet-valuable/how-to-be-a-proper-snob-ce74abcbc737'
 license: 'cc'
+lang: 'en'
 ---
 
 Being a snob is a unique kind of pleasure. The momentary lapse of superiority you experience putting on a condescending smile and looking down on plebs around is incomparable. The dead silence you hear after “Breton cider is just tasteless compared to Norman” feels like a well deserved victory. Bonus points for pronouncing the toponyms with French accent.
