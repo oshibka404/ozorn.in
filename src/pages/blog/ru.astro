@@ -7,10 +7,10 @@ import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 
 const posts = (await getCollection('blog'))
-	.filter(post => post.data.lang === 'en')
-	.sort(
-		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-	);
+    .filter(post => post.data.lang === 'ru')
+    .sort(
+        (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+    );
 ---
 
 <!doctype html>
@@ -94,7 +94,7 @@ const posts = (await getCollection('blog'))
 	<body>
 		<Header />
 		<main>
-			<p>I write in <a href="/blog">English</a> and <a href="/blog/ru">Russian</a>.</p>
+            <p>Я пишу <a href="/blog">по-английски</a> и <a href="/blog/ru">по-русски</a>.</p>
 			<section>
 				<ul>
 					{
