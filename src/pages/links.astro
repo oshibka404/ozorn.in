@@ -1,35 +1,115 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const links = (await getCollection('links'))
+    .sort(
+        (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+    );
 ---
 
-<Layout
-	title="Links"
-	description="My recommendations"
-	pubDate={new Date('September 13 2024')}
->
-	<h3>Organizations worth supporting</h3>
-	<ul>
-		<li><a href="https://www.givewell.org">GiveWell</a></li>
-		<li><a href="https://www.thelifeyoucansave.org">The Life You Can Save</a></li>
-		<li><a href="https://www.eff.org">EFF</a></li>
-		<li><a href="https://wikimediafoundation.org">Wikimedia</a></li>
-		<li><a href="https://www.khanacademy.org/">Khan Academy</a></li>
-		<li><a href="https://supporting.openstreetmap.org">OpenStreetMap Foundation</a></li>
-		<li><a href="https://archive.org">Internet Archive</a></li>
-	</ul>
-	<h3>Personal blogs I find interesting:</h3>
-	<ul>
-		<li><a href="https://charity.wtf">Charity Majors</a> on being an engineering manager</li>
-		<li><a href="https://pluralistic.net">Pluralistic</a> by Cory Doctorow</li>
-		<li><a href="https://newsletter.pragmaticengineer.com">Pragmatic Engineer</a> by Gergely Orosz</li>
-		<li><a href="https://www.astralcodexten.com">Astral Codex Ten</a> by Scott Alexander</li>
-		<li><a href="https://www.wheresyoured.at">Where's Your Ed At</a> by Ed Zitron</li>
-	</ul>
-	<h3>Products I use:</h3>
-	<ul>
-		<li><a href="https://kagi.com">Kagi</a> - Superior search engine</li>
-		<li><a href="https://obsidian.md">Obsidian</a> - notes on steroids</li>
-		<li><a href="https://hyliu.me/fluent-reader/">Fluent Reader</a> - Desktop RSS reader</li>
-		<li><a href="https://codeberg.org">Codeberg</a> - Open-source community-driven git hosting</li>
-	</ul>
-</Layout>
+<!doctype html>
+<html lang="en">
+<head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+        main {
+            width: 960px;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            width: calc(50% - 1rem);
+        }
+        ul li * {
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+        ul li:first-child {
+            width: 100%;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        ul li:first-child img {
+            width: 100%;
+        }
+        ul li:first-child .title {
+            font-size: 2.369rem;
+        }
+        ul li img {
+            margin-bottom: 0.5rem;
+            border-radius: 12px;
+        }
+        ul li a {
+            display: block;
+        }
+        .title {
+            margin: 0;
+            color: rgb(var(--black));
+            line-height: 1;
+        }
+        .description {
+            color: rgb(var(--black));
+        }
+        .date {
+            margin: 0;
+            color: rgb(var(--gray));
+        }
+        ul li a:hover h4,
+        ul li a:hover .description,
+        ul li a:hover .date {
+            color: rgb(var(--accent));
+        }
+        ul a:hover img {
+            box-shadow: var(--box-shadow);
+        }
+        @media (max-width: 720px) {
+            ul {
+                gap: 0.5em;
+            }
+            ul li {
+                width: 100%;
+                text-align: center;
+            }
+            ul li:first-child {
+                margin-bottom: 0;
+            }
+            ul li:first-child .title {
+                font-size: 1.563em;
+            }
+        }
+    </style>
+</head>
+<body>
+<Header />
+<main>
+    <section>
+        <ul>
+            {
+                links.map((post) => (
+                    <li>
+                        <a href={`/blog/${post.slug}/`}>
+                            <h4 class="title">{post.data.title}</h4>
+                            {
+                                post.data.description
+                            }
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+</main>
+<Footer />
+</body>
+</html>
