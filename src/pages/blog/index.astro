@@ -42,7 +42,7 @@ const posts = (await getCollection('blog'))
 				text-align: center;
 			}
 			ul li:first-child img {
-				width: 100%;
+				width: auto;
 			}
 			ul li:first-child .title {
 				font-size: 2.369rem;
@@ -102,12 +102,12 @@ const posts = (await getCollection('blog'))
 							<li>
 								<a href={`/blog/${post.slug}/`}>
 									{
-										post.data.heroImage && 
+										post.data.heroImage &&
 										<img width={720} height={360} src={post.data.heroImage} alt="" />
 									}
 									<h4 class="title">{post.data.title}</h4>
 									{
-										post.data.description && 
+										post.data.description &&
 										<p class="description">{post.data.description}</p>
 									}
 									<p class="date">
