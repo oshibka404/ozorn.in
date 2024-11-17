@@ -2,7 +2,7 @@
 title: 'How to properly be a snob'
 description: 'No one likes you as a snob, even other snobs, but that’s fine. Get used to it, be proud of it. Masses are too primitive to appreciate anything spectacular, including you.'
 pubDate: 'Jul 8 2024'
-heroImage: '/how-to-snob.png'
+heroImage: '/blog-cover/how-to-snob.png'
 original: 'https://medium.com/long-sweet-valuable/how-to-be-a-proper-snob-ce74abcbc737'
 license: 'cc'
 lang: 'en'

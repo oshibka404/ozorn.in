@@ -2,7 +2,7 @@
 title: 'The Technical Debt of Life'
 description: 'The idea of technical debt is easy to explain even to a non-techie. You can apply the same concept to your daily life.'
 pubDate: 'Jul 05 2024'
-heroImage: '/tech-debt-life.webp'
+heroImage: '/blog-cover/tech-debt-life.webp'
 original: 'https://medium.com/@oshibka404/the-technical-debt-of-life-d3e165700ac6'
 license: 'cc'
 lang: 'en'

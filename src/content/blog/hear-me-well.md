@@ -2,7 +2,7 @@
 title: 'Hi, can you hear me well?'
 description: 'And now? Ah, good. I see everyone is already here. Sorry for making you wait;'
 pubDate: 'Jul 10 2024'
-heroImage: '/hear-me-well.webp'
+heroImage: '/blog-cover/hear-me-well.webp'
 original: 'https://medium.com/@oshibka404/hi-can-you-hear-me-well-88f92c09785a'
 license: 'cc'
 lang: 'en'

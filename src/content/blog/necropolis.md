@@ -2,7 +2,7 @@
 title: 'Некрополь'
 description: 'Живой в царстве мёртвых'
 pubDate: 'Mar 7 2019'
-heroImage: '/necropolis.jpg'
+heroImage: '/blog-cover/necropolis.jpg'
 license: 'cc'
 lang: 'ru'
 ---

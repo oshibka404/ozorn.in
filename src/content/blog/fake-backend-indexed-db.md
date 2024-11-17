@@ -3,7 +3,7 @@ title: 'How to create fake back-end using IndexedDB'
 description: 'How we reducing the feedback loop by dogfooding a feature with an in-browser back-end using indexedDB'
 pubDate: 'Jul 22 2024'
 original: 'https://medium.com/miro-engineering/how-to-create-fake-back-end-using-indexeddb-388d6f266eb0'
-heroImage: '/fake-backend-indexed-db.webp'
+heroImage: '/blog-cover/fake-backend-indexed-db.webp'
 license: 'prop'
 lang: 'en'
 ---

@@ -2,7 +2,7 @@
 title: 'Zero to one, then to shit'
 description: 'I’ve seen it many times; I’ll tell you how it goes. First, there’s something the world needs. Television. A superior search engine. A better social network.'
 pubDate: 'Sep 02 2024'
-heroImage: '/zero-one-shit.png'
+heroImage: '/blog-cover/zero-one-shit.png'
 original: 'https://medium.com/@oshibka404/zero-to-one-then-to-shit-cf949aea5b3b'
 license: 'cc'
 lang: 'en'

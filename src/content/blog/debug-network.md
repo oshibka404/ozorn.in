@@ -2,7 +2,7 @@
 title: 'Know Your Tools: Network Tab in DevTools'
 description: 'Querying and filtering network resources in devtools'
 pubDate: 'Nov 16 2024'
-heroImage: '/debug-network.png'
+heroImage: '/blog-cover/debug-network.png'
 license: 'cc'
 lang: 'en'
 ---
