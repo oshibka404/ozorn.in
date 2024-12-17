@@ -41,10 +41,7 @@ const posts = (await getCollection('blog'))
 						{
 							posts.map((post) => (
 								<li>
-									<a href={`/blog/${post.slug}/`}>
-										{post.data.title}
-									</a>
-									{
+									<a href={`/blog/${post.slug}/`}>{post.data.title}</a>{
 										post.data.description &&
 										<>. {post.data.description}</>
 									}
@@ -133,6 +130,24 @@ const posts = (await getCollection('blog'))
 
 			.overview {
 				display: flex;
+				gap: 1em;
+
+				& > div {
+					flex: 1;
+				}
+
+				& ul {
+					padding-left: 0;
+				}
+
+				& li {
+					list-style: none;
+					padding-bottom: .5em;
+				}
+
+				& h3 {
+					font-size: 1.5em;
+				}
 			}
 
 			@media (max-width: 720px) {
