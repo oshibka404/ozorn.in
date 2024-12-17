@@ -3,6 +3,14 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import {getCollection} from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+
+const posts = (await getCollection('blog'))
+	.filter(post => post.data.lang === 'en')
+	.sort(
+		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+	).slice(0, 5);
 ---
 
 <!doctype html>
@@ -21,11 +29,40 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<a href="https://booking.com" class="company-link booking-link">Booking</a>, 
 				<a href="https://genestack.com" class="company-link genestack-link">Genestack</a>, 
 				<a href="https://wrike.com" class="company-link wrike-link">Wrike</a>, 
-				<a href="https://yandex.com" class="company-link yandex-link">Yandex</a>. 
+				<a href="https://yandex.com" class="company-link yandex-link">Yandex</a>.
 			</p>
 			<p>
 				I code for web, write and make music.
 			</p>
+			<section style="display: flex;">
+				<div>
+					<h3><a href="/blog">Latest posts</a></h3>
+					<ul>
+						{
+							posts.map((post) => (
+								<li>
+									<a href={`/blog/${post.slug}/`}>
+										{post.data.title}
+									</a>
+									{
+										post.data.description &&
+										<>. {post.data.description}</>
+									}
+								</li>
+							))
+						}
+					</ul>
+				</div>
+				<div>
+					<h3>Latest projects</h3>
+					<ul>
+						<li>I am writing a book on debugging web applications. To be published in 2025 by <a href="https://pragprog.com">Pragmatic Programmers</a></li>
+						<li>I organized <a href="https://hightechmess.com/">High Tech Mess</a>, a mini-festival of art and technologies</li>
+						<li>I played live at <a href="https://youtu.be/Ytjqds8gVOU">SP Sessions</a> made possible by <a href="https://59perlen.com">59perlen</a></li>
+						<li>I released <a href="https://threecoloredsquares.bandcamp.com/track/novaya-zemlya">Novaya Zemlya</a>, equally influenced by contemporary classical and dance music</li>
+					</ul>
+				</div>
+			</section>
 		</main>
 		<style>
 			.company-link {
