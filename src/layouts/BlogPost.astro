@@ -19,12 +19,18 @@ const { title, description, pubDate, updatedDate, heroImage, license, original }
 			}
 			.hero-image {
 				width: 100%;
+				display: flex;
+				justify-content: center;
 				& img {
 					display: block;
 					width: auto;
 					margin: 0 auto;
 					border-radius: 12px;
 					box-shadow: var(--box-shadow);
+				}
+
+				& .hero-constraint {
+					max-width: 1020px;
 				}
 			}
 			.prose {
@@ -65,7 +71,9 @@ const { title, description, pubDate, updatedDate, heroImage, license, original }
 		<main>
 			<article>
 				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt={description} />}
+					<div class="hero-constraint">
+						{heroImage && <img width={1020} height={510} src={heroImage} alt={description} />}
+					</div>
 				</div>
 				<div class="prose">
 					<div class="title">
