@@ -3,6 +3,7 @@ title: 'Розовые очки для браузера'
 description: 'Пишем расширение для браузера, заменяющее русский мат на литературные синонимы'
 pubDate: 'May 20 2013'
 original: 'https://habr.com/post/180241/'
+emoji: '❗'
 license: 'cc'
 lang: 'ru'
 ---

@@ -4,6 +4,7 @@ description: 'Full-text search across HTTP headers, request and response bodies 
 pubDate: 'Nov 16 2024'
 heroImage: '/blog-cover/devtools-network-full-text-search.png'
 license: 'cc'
+emoji: '🔎'
 tags: ['debugging']
 lang: 'en'
 ---

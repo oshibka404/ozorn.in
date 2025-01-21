@@ -5,6 +5,7 @@ pubDate: 'Jul 10 2024'
 heroImage: '/blog-cover/hear-me-well.webp'
 original: 'https://medium.com/@oshibka404/hi-can-you-hear-me-well-88f92c09785a'
 license: 'cc'
+emoji: '👨‍💻'
 lang: 'en'
 ---
 

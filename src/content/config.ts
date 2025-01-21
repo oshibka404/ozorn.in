@@ -11,6 +11,7 @@ const blog = defineCollection({
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
 		license: z.string().optional(),
+		emoji: z.string().optional(),
 		original: z.string().optional(),
 		tags: z.array(z.string()).optional(),
 		lang: z.enum(['ru', 'en']),

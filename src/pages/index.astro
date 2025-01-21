@@ -41,6 +41,7 @@ const posts = (await getCollection('blog'))
 						{
 							posts.map((post) => (
 								<li>
+									{post.data.emoji ?? '📝'}
 									<a href={`/blog/${post.slug}/`}>{post.data.title}</a>{
 										post.data.description &&
 										<>. {post.data.description}</>

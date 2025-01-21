@@ -4,6 +4,7 @@ description: 'С недавних пор существует элегантна
 pubDate: 'May 15 2013'
 original: 'https://habr.com/en/articles/179829/'
 license: 'cc'
+emoji: '🔢'
 lang: 'ru'
 ---
 

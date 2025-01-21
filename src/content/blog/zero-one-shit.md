@@ -5,6 +5,7 @@ pubDate: 'Sep 02 2024'
 heroImage: '/blog-cover/zero-one-shit.png'
 original: 'https://medium.com/@oshibka404/zero-to-one-then-to-shit-cf949aea5b3b'
 license: 'cc'
+emoji: '📉'
 tags: ['rot']
 lang: 'en'
 ---

@@ -5,6 +5,7 @@ pubDate: 'Jul 22 2024'
 original: 'https://medium.com/miro-engineering/how-to-create-fake-back-end-using-indexeddb-388d6f266eb0'
 heroImage: '/blog-cover/fake-backend-indexed-db.webp'
 license: 'prop'
+emoji: '💾'
 lang: 'en'
 ---
 

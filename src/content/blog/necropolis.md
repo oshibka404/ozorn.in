@@ -4,6 +4,7 @@ description: 'Живой в царстве мёртвых'
 pubDate: 'Mar 7 2019'
 heroImage: '/blog-cover/necropolis.jpg'
 license: 'cc'
+emoji: '🪦'
 lang: 'ru'
 ---
 

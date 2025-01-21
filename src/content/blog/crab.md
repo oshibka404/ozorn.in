@@ -4,6 +4,7 @@ description: "Convergent evolution of internet services"
 pubDate: 'Dec 20 2024'
 heroImage: '/blog-cover/crab.png'
 license: 'cc'
+emoji: '🦀'
 tags: ['rot']
 lang: 'en'
 ---

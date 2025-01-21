@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import License from '../components/License.astro';
 
-const { title, description, pubDate, updatedDate, heroImage, license, original } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, license, original, emoji } = Astro.props;
 ---
 
 <html lang="en">
@@ -87,7 +87,7 @@ const { title, description, pubDate, updatedDate, heroImage, license, original }
 								)
 							}
 						</div>
-						<h1>{title}</h1>
+						<h1>{emoji ? `${emoji} ` : ''}{title}</h1>
 						<div class="metadata">
 							{license && <License license={license} />}
 							{original && <span>First published at <a href={original}>{(new URL(original)).hostname}</a></span>}

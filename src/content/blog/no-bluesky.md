@@ -4,6 +4,7 @@ description: "You won't find me on Mastodon either"
 pubDate: 'Dec 17 2024'
 heroImage: '/blog-cover/no-bluesky.png'
 license: 'cc'
+emoji: '🦋'
 tags: ['rot']
 lang: 'en'
 ---

@@ -4,6 +4,7 @@ description: 'Здравствуйте, дорогой Мартин Алексе
 pubDate: 'Apr 25 2018'
 original: 'https://vk.com/@oshibka404-norma-20'
 license: 'cc'
+emoji: '😬'
 lang: 'ru'
 ---
 

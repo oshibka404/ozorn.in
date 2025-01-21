@@ -5,6 +5,7 @@ pubDate: 'Aug 19 2024'
 heroImage: '/blog-cover/etude-white-birch.png'
 original: 'https://medium.com/@oshibka404/etude-in-white-and-birch-d8f292f26a4c'
 license: 'cc'
+emoji: '⬜'
 lang: 'en'
 ---
 

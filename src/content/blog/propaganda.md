@@ -4,6 +4,7 @@ description: 'О приёмах пропаганды, которые испол�
 pubDate: 'May 25 2013'
 original: 'https://habr.com/post/180899/'
 license: 'cc'
+emoji: '👮'
 lang: 'ru'
 ---
 

@@ -5,6 +5,7 @@ pubDate: 'Jan 18 2025'
 heroImage: '/blog-cover/quit-instagram.png'
 license: 'cc'
 tags: ['rot']
+emoji: '🚪'
 lang: 'en'
 ---
 

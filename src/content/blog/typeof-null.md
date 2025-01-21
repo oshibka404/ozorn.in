@@ -4,6 +4,7 @@ description: "Why typeof null === 'object'?"
 pubDate: 'Feb 10 2014'
 original: 'https://habr.com/en/articles/200664/'
 license: 'cc'
+emoji: '🤪'
 lang: 'ru'
 ---
 

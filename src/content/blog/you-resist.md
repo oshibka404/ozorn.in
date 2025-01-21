@@ -5,6 +5,7 @@ pubDate: 'Sep 14 2024'
 heroImage: '/blog-cover/you-resist.png'
 original: 'https://medium.com/@oshibka404/you-are-how-you-resist-ae0f31650377'
 license: 'cc'
+emoji: '✊'
 lang: 'en'
 ---
 
