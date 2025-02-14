@@ -5,7 +5,7 @@ pubDate: 'Dec 20 2024'
 heroImage: '/blog-cover/crab.png'
 license: 'cc'
 emoji: '🦀'
-tags: ['rot']
+tags: ['essay']
 lang: 'en'
 ---
 The evolution created a crab out of a non-crab at least five independent times. It happens so consistently that they had to invent [the word for it](https://en.wikipedia.org/wiki/Carcinisation).

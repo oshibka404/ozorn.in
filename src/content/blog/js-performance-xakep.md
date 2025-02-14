@@ -4,6 +4,7 @@ description: 'В этой статье я опишу несколько прие
 pubDate: 'Apr 16 2014'
 original: 'https://xakep.ru/2014/07/22/speedup-client-javascript/'
 license: 'prop'
+tags: ['tutorial']
 emoji: '🏎️'
 lang: 'ru'
 ---

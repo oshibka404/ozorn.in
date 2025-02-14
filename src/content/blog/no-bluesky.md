@@ -5,7 +5,7 @@ pubDate: 'Dec 17 2024'
 heroImage: '/blog-cover/no-bluesky.png'
 license: 'cc'
 emoji: '🦋'
-tags: ['rot']
+tags: ['essay']
 lang: 'en'
 ---
 

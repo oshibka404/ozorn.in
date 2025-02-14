@@ -4,6 +4,7 @@ description: 'Никто не идеален, с этим придётся жи�
 pubDate: 'Feb 15 2019'
 license: 'cc'
 emoji: '🐑'
+tags: ['essay']
 lang: 'ru'
 ---
 

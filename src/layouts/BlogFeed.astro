@@ -4,14 +4,28 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import FormattedDate from '../components/FormattedDate.astro';
+import { getCollection } from 'astro:content';
 
-const {posts} = Astro.props;
+const allPosts = await getCollection('blog');
+const tags = new Map<string, number>()
+
+allPosts.forEach(post => {
+    post.data.tags?.forEach((tag: string) => {
+        const count = tags.get(tag) ?? 0;
+        tags.set(tag, count + 1)
+    })
+})
+
+const ruCount = allPosts.reduce((acc, post) => post.data.lang === 'ru' ? acc + 1 : acc, 0)
+const enCount = allPosts.reduce((acc, post) => post.data.lang === 'en' ? acc + 1 : acc, 0)
+
+const {posts, title, tag} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 <head>
-    <BaseHead title={`Blog — ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+    <BaseHead title={`${title} — ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
     <style>
         main {
             width: 960px;
@@ -51,6 +65,9 @@ const {posts} = Astro.props;
         ul li a:hover .date {
             color: rgb(var(--accent));
         }
+        sup {
+            color: rgb(var(--gray));
+        }
         @media (max-width: 720px) {
             ul {
                 gap: 0.5em;
@@ -61,7 +78,24 @@ const {posts} = Astro.props;
 <body>
 <Header />
 <main>
-    <p>I write in <a href="/blog">English</a> and <a href="/blog/ru">Russian</a>.</p>
+    <h1>{tag}</h1>
+    <p>
+        I write in <a href="/blog">English</a><sup>{enCount}</sup> and <a href="/blog/ru">Russian</a><sup>{ruCount}</sup>
+        on topics of {[...tags.keys()].map((key, index, array) => {
+            let separator = index === array.length - 1 ? '' : ','
+            let conjunction = index === array.length - 2 ? ' and ' : ''
+            const tagName = key.replace('-', ' ')
+            if (key === tag) {
+                return <span>{tagName}{separator}<sup>{tags.get(key)}</sup>{conjunction}</span>;
+            }
+            return (
+                <span>
+                    <a href=`/blog/tag/${key}`>{tagName}{separator}</a><sup>{tags.get(key)}</sup>
+                    {conjunction}
+                </span>
+            )
+        })}.
+    </p>
     <section>
         <ul>
             {

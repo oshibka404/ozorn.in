@@ -4,7 +4,7 @@ description: "It's that simple"
 pubDate: 'Jan 18 2025'
 heroImage: '/blog-cover/quit-instagram.png'
 license: 'cc'
-tags: ['rot']
+tags: ['essay']
 emoji: '🚪'
 lang: 'en'
 ---

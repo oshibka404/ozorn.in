@@ -1,0 +1,33 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection('blog');
+    const tags = new Map<string, CollectionEntry<'blog'>[]>()
+
+    allPosts.forEach(post => {
+        post.data.tags?.forEach(tag => {
+            if (!tags.has(tag)) {
+                tags.set(tag, []);
+            }
+            tags.get(tag)!.push(post);
+        })
+    })
+
+    return [...tags.keys()].map((tag: string) => ({
+        params: { slug: tag },
+        props: {
+            posts: tags.get(tag)!.sort(
+            (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+            ),
+            tag: tag,
+        },
+    }));
+}
+
+const {posts, tag} = Astro.props;
+
+import BlogFeed from "../../../layouts/BlogFeed.astro";
+---
+
+<BlogFeed posts={posts} title={`Posts tagged "${tag.replace('-', ' ')}"`} tag={tag} />

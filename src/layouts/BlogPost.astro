@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import License from '../components/License.astro';
 
-const { title, description, pubDate, updatedDate, heroImage, license, original, emoji } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, license, original, emoji, tags } = Astro.props;
 ---
 
 <html lang="en">
@@ -95,6 +95,17 @@ const { title, description, pubDate, updatedDate, heroImage, license, original, 
 						<hr />
 					</div>
 					<slot />
+					{tags && (
+						<div class="tags">
+							{
+								tags.map((tag: string) =>
+									<a href={`/blog/tag/${tag}`}>
+										{tag.replace('-', ' ')}
+									</a>
+								)
+							}
+						</div>
+					)}
 				</div>
 			</article>
 		</main>

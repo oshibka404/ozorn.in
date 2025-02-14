@@ -4,6 +4,7 @@ description: 'Введение в простейшие клеточные авт
 pubDate: 'Jan 30 2016'
 original: 'https://habr.com/post/273393/'
 license: 'cc'
+tags: ['tutorial']
 emoji: '👾'
 lang: 'ru'
 ---

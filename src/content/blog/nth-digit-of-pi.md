@@ -5,6 +5,7 @@ pubDate: 'May 15 2013'
 original: 'https://habr.com/en/articles/179829/'
 license: 'cc'
 emoji: '🔢'
+tags: ['tutorial']
 lang: 'ru'
 ---
 

@@ -5,6 +5,7 @@ pubDate: 'Jul 05 2024'
 heroImage: '/blog-cover/tech-debt-life.webp'
 original: 'https://medium.com/@oshibka404/the-technical-debt-of-life-d3e165700ac6'
 license: 'cc'
+tags: ['essay']
 emoji: '💸'
 lang: 'en'
 ---

@@ -36,7 +36,7 @@ const posts = (await getCollection('blog'))
 			</p>
 			<section class="overview">
 				<div>
-					<h3><a href="/blog">Latest posts</a></h3>
+					<h3>Latest posts</h3>
 					<ul>
 						{
 							posts.map((post) => (
@@ -50,6 +50,7 @@ const posts = (await getCollection('blog'))
 							))
 						}
 					</ul>
+					<a href="/blog">more</a>
 				</div>
 				<div>
 					<h3>Latest projects</h3>

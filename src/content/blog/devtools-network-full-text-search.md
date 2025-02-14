@@ -5,7 +5,7 @@ pubDate: 'Nov 16 2024'
 heroImage: '/blog-cover/devtools-network-full-text-search.png'
 license: 'cc'
 emoji: '🔎'
-tags: ['debugging']
+tags: ['tutorial']
 lang: 'en'
 ---
 

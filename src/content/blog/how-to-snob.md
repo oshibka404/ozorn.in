@@ -5,6 +5,7 @@ pubDate: 'Jul 8 2024'
 heroImage: '/blog-cover/how-to-snob.png'
 original: 'https://medium.com/long-sweet-valuable/how-to-be-a-proper-snob-ce74abcbc737'
 license: 'cc'
+tags: ['essay']
 emoji: '🍷'
 lang: 'en'
 ---

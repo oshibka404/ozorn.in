@@ -4,6 +4,7 @@ description: 'You are not what you think you are. You are what others think you 
 pubDate: 'Jan 13 2025'
 heroImage: '/blog-cover/you-mask.png'
 license: 'cc'
+tags: ['essay']
 emoji: '🎭'
 lang: 'en'
 ---

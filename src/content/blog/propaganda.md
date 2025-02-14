@@ -5,6 +5,7 @@ pubDate: 'May 25 2013'
 original: 'https://habr.com/post/180899/'
 license: 'cc'
 emoji: '👮'
+tags: ['essay']
 lang: 'ru'
 ---
 

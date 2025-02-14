@@ -3,7 +3,7 @@ title: 'On Debugging'
 description: 'The world doesn’t always need more. Sometimes it needs better'
 pubDate: 'Oct 18 2024'
 license: 'cc'
-tags: ['debugging']
+tags: ['essay']
 emoji: '🐛'
 lang: 'en'
 ---
