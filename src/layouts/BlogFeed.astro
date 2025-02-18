@@ -73,24 +73,27 @@ const {posts, title, tag} = Astro.props;
                 gap: 0.5em;
             }
         }
+        a.active {
+            background-color: rgb(var(--accent-dark));
+            color: var(--white);
+        }
     </style>
 </head>
 <body>
 <Header />
 <main>
-    <h1>{tag}</h1>
+    {tag && <h1>{tag.replace('-', ' ')}</h1>}
     <p>
         I write in <a href="/blog">English</a><sup>{enCount}</sup> and <a href="/blog/ru">Russian</a><sup>{ruCount}</sup>
         on topics of {[...tags.keys()].map((key, index, array) => {
             let separator = index === array.length - 1 ? '' : ','
             let conjunction = index === array.length - 2 ? ' and ' : ''
             const tagName = key.replace('-', ' ')
-            if (key === tag) {
-                return <span>{tagName}{separator}<sup>{tags.get(key)}</sup>{conjunction}</span>;
-            }
             return (
                 <span>
-                    <a href=`/blog/tag/${key}`>{tagName}{separator}</a><sup>{tags.get(key)}</sup>
+                    <a href=`/blog/tag/${key}` class:list={{
+                        active: key === tag
+                    }}>{tagName}{separator}</a><sup>{tags.get(key)}</sup>
                     {conjunction}
                 </span>
             )
@@ -111,9 +114,8 @@ const {posts, title, tag} = Astro.props;
                                     <FormattedDate date={post.data.pubDate} />
                                 </p>
                             </a>
-                        </li>
-                ))
-                }
+                        </li>))
+            }
         </ul>
     </section>
 </main>
