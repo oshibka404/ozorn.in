@@ -8,6 +8,12 @@ export interface LinkData {
 
 export const linksData: LinkData[] = [
     {
+        url: "https://jon.bo/posts/meaningful-life/",
+        title: "what makes a meaningful life?",
+        quote: "Re-potting a plant. Smiling at a stranger. The extraordinary emerges from the ordinary, complexity from simplicity. Being in right relationship with self, others, and the earth. Building towards systems that are re-generative, non-extractive, non-exclusionary. Learning, each and every day.",
+        tags: ['essay', 'human', 'life'],
+    },
+    {
         url: "https://www.wheresyoured.at/what-were-fighting-for/",
         title: "What We're Fighting For",
         quote: "We do not \"use\" the computer — we negotiate with it to try and make it do the things we want it to do, because the incentives behind modern software development no longer align with the user.",
