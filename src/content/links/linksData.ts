@@ -2,10 +2,17 @@ export interface LinkData {
     url: string;
     title: string;
     comment?: string;
+    quote?: string;
     tags: string[];
 }
 
 export const linksData: LinkData[] = [
+    {
+        url: "https://www.wheresyoured.at/what-were-fighting-for/",
+        title: "What We're Fighting For",
+        quote: "We do not \"use\" the computer — we negotiate with it to try and make it do the things we want it to do, because the incentives behind modern software development no longer align with the user.",
+        tags: ['essay', 'tech'],
+    },
     {
         url: "https://www.henrikkarlsson.xyz/p/start-a-blog",
         title: "Advice for a friend who wants to start a blog",
@@ -15,19 +22,22 @@ export const linksData: LinkData[] = [
     {
         url: "http://johnsalvatier.org/blog/2017/submission-and-dominance-among-friends",
         title: "Submission and dominance among friends",
-        comment: "Simple arithmetics has a surprising amount of detail",
+        quote: "I recently found myself longing for male friends to act dominant over me. Imagining close male friends putting their arms over my shoulders and jostling me a bit, or squeezing my shoulders a bit roughly as they come up to talk to me felt good. Actions that clearly convey ‘I’m in charge here and I think you’ll like it’.",
+        comment: "Status dynamics are weirder than you might think.",
         tags: ['essay', 'psychology'],
     },
     {
         url: "https://chadnauseam.com/coding/random/calculator-app",
         title: "A calculator app? Anyone could make that",
+        quote: "Remember - if the calculator showed 0 for e^(-10000), that would be wrong. It's not 0. It should say 0.00000... and let you scroll until you see where it changes. But, it SHOULD show 0 when you type sin(π). sin(π) is exactly 0",
         comment: "Simple arithmetics has a surprising amount of detail",
         tags: ['coding', 'algorithms'],
     },
     {
         url: "https://www.lesswrong.com/posts/PJu2HhKsyTEJMxS9a/you-don-t-know-how-bad-most-things-are-nor-precisely-how",
         title: "You don't know how bad most things are nor precisely how they're bad",
-        comment: "Quality you cannot measure",
+        quote: "If their art dies out, maybe nobody will know how bad all the pianos are. And then we'll all have slightly worse pianos than we would otherwise have. And I mean if that's the way things are going to go, then let's just steer the Earth into the Sun, because what's the point of any of this.",
+        comment: "Quality you cannot measure and barely can feel",
         tags: ['music', 'essay'],
     },
     {
@@ -70,7 +80,7 @@ export const linksData: LinkData[] = [
         url: "https://newsletter.pragmaticengineer.com",
         title: "Pragmatic Engineer by Gergely Orosz",
         comment: "Insides from IT companies, deep analytics of what's happening in the industry",
-        tags: ['blog', 'people', 'coding'],
+        tags: ['blog', 'people', 'coding', 'tech'],
     },
     {
         url: "https://www.astralcodexten.com",

@@ -40,6 +40,9 @@ const {links, activeTag, tags} = Astro.props
             background-color: rgb(var(--accent-dark));
             color: var(--white);
         }
+        blockquote {
+            font-size: 1em;
+        }
     </style>
 </head>
 <body>
@@ -59,9 +62,11 @@ const {links, activeTag, tags} = Astro.props
     }
     <ul>
         {
-            links.map(({url, title, comment}) => (
+            links.map(({url, title, comment, quote}) => (
                     <li>
-                        <a href={url}>{title}</a> — {comment}
+                        <a href={url}>{title}</a>
+                        {comment && <>— {comment}</>}
+                        {quote && <blockquote>{quote}</blockquote>}
                     </li>
             ))
         }

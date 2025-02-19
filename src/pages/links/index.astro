@@ -23,6 +23,13 @@ const tags = linksData.reduce((acc, link) => {
         .tag {
             margin-right: .25em;
         }
+        .tag > a.active {
+            background-color: rgb(var(--accent-dark));
+            color: var(--white);
+        }
+        blockquote {
+            font-size: 1em;
+        }
     </style>
 </head>
 <body>
@@ -40,9 +47,11 @@ const tags = linksData.reduce((acc, link) => {
     </p>
     <ul>
         {
-            linksData.map(({url, title, comment}) => (
+            linksData.map(({url, title, comment, quote}) => (
                 <li>
-                    <a href={url}>{title}</a> — {comment}
+                    <a href={url}>{title}</a>
+                    {comment && <>— {comment}</>}
+                    {quote && <blockquote>{quote}</blockquote>}
                 </li>
             ))
         }
