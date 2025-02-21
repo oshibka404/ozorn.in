@@ -8,6 +8,13 @@ export interface LinkData {
 
 export const linksData: LinkData[] = [
     {
+        url: "https://www.miriamsuzanne.com/2025/02/12/tech-ai-wtf/",
+        title: "Tech continues to be political", 
+        comment: "And the politics aren’t looking great",
+        quote: "Every time I log on I feel like I’m being gaslit – asked to train my shitty replacement, and then step aside. The future is not women, I’m learning now. [...] The future is actually inhuman word synthesizers.",
+        tags: ['essay', 'tech'],
+    },
+    {
         url: "https://kk.org/thetechnium/50-years-of-travel-tips/",
         title: "50 Years of Travel Tips",
         quote: "Organize your travel around passions instead of destinations. An itinerary based on obscure cheeses, or naval history, or dinosaur digs, or jazz joints will lead to far more adventures, and memorable times than a grand tour of famous places.",
@@ -86,25 +93,25 @@ export const linksData: LinkData[] = [
         url: "https://pluralistic.net",
         title: "Pluralistic by Cory Doctorow",
         comment: "Sci-fi writer and digital rights activist punches monopolies and capitalism in general.",
-        tags: ['blog', 'people', 'politics'],
+        tags: ['blog', 'politics'],
     },
     {
         url: "https://newsletter.pragmaticengineer.com",
         title: "Pragmatic Engineer by Gergely Orosz",
         comment: "Insides from IT companies, deep analytics of what's happening in the industry",
-        tags: ['blog', 'people', 'coding', 'tech'],
+        tags: ['blog', 'coding', 'tech'],
     },
     {
         url: "https://www.astralcodexten.com",
         title: "Astral Codex Ten by Scott Alexander",
         comment: "Psychiatrist based in Bay Area writes about Bayes, rationalism, effective altruism and, well, psychiatry.",
-        tags: ['blog', 'people', 'psychology'],
+        tags: ['blog', 'psychology'],
     },
     {
         url: "https://www.wheresyoured.at",
         title: "Where's Your Ed At by Ed Zitron",
         comment: "On economic bubbles, rot economy and calling bullshit",
-        tags: ['blog', 'people', 'ai'],
+        tags: ['blog', 'ai'],
     },
     {
         url: "https://kagi.com",
