@@ -8,6 +8,12 @@ export interface LinkData {
 
 export const linksData: LinkData[] = [
     {
+        url: "https://kk.org/thetechnium/50-years-of-travel-tips/",
+        title: "50 Years of Travel Tips",
+        quote: "Organize your travel around passions instead of destinations. An itinerary based on obscure cheeses, or naval history, or dinosaur digs, or jazz joints will lead to far more adventures, and memorable times than a grand tour of famous places.",
+        tags: ['essay', 'travel', 'life'],
+    },
+    {
         url: "https://jon.bo/posts/meaningful-life/",
         title: "what makes a meaningful life?",
         quote: "Re-potting a plant. Smiling at a stranger. The extraordinary emerges from the ordinary, complexity from simplicity. Being in right relationship with self, others, and the earth. Building towards systems that are re-generative, non-extractive, non-exclusionary. Learning, each and every day.",
