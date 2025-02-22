@@ -7,6 +7,19 @@ export interface LinkData {
 }
 
 export const linksData: LinkData[] = [
+    // {
+    //     url: "",
+    //     title: "",
+    //     comment: "",
+    //     quote: "",
+    //     tags: ['', ''],
+    // },
+    {
+        url: "https://goodenough.us/blog/2023-08-23-bad-ideas-are-fun/",
+        title: "Bad Ideas Are Fun",
+        quote: "And once you loosen up your brain by coming up with ten bad ideas, some good ideas may follow. But here's another thing: we're not great at judging if an idea is good or bad. So write all of your ideas down.",
+        tags: ['essay', 'psychology', 'management'],
+    },
     {
         url: "https://www.miriamsuzanne.com/2025/02/12/tech-ai-wtf/",
         title: "Tech continues to be political", 
