@@ -1,8 +1,10 @@
 export interface LinkData {
-    url: string;
+    url?: string;
     title: string;
     comment?: string;
     quote?: string;
+    image?: string;
+    video?: string;
     tags: string[];
 }
 

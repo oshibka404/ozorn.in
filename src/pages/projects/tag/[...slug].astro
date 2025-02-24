@@ -1,9 +1,10 @@
 ---
-import {type LinkData, linksData} from '../../../content/linksData';
+import {type LinkData} from '../../../content/linksData';
+import {projects} from "../../../content/projects";
 import LinkFeed from '../../../layouts/LinkFeed.astro';
 
 export async function getStaticPaths() {
-    const tags = linksData.reduce((acc, link) => {
+    const tags = projects.reduce((acc, link) => {
         for (const tag of link.tags) {
             if (!acc.has(tag)) acc.set(tag, [])
             acc.get(tag)!.push(link);
@@ -24,4 +25,4 @@ const {links, activeTag} = Astro.props
 
 ---
 
-<LinkFeed links={links} title={activeTag.replace('-', ' ')} activeTag={activeTag} />
+<LinkFeed links={links} title={activeTag.replace('-', ' ')} activeTag={activeTag} baseUrl="projects" />

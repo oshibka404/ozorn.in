@@ -1,0 +1,72 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import type {LinkData} from "../content/linksData";
+
+type Props = {
+    links: LinkData[];
+    title: string;
+    activeTag?: string;
+    baseUrl?: string;
+}
+
+const {links, title, activeTag, baseUrl = 'links'} = Astro.props
+
+const tags = links.reduce((acc, link) => {
+    for (const tag of link.tags) {
+        if (!acc.has(tag)) acc.set(tag, [])
+        acc.get(tag)!.push(link);
+    }
+    return acc;
+}, new Map<string, LinkData[]>())
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+    <BaseHead title={`${title} — ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+    <style>
+        .tag {
+            margin-right: .25em;
+        }
+        .tag > a.active {
+            background-color: rgb(var(--accent-dark));
+            color: var(--white);
+        }
+        blockquote {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+<Header />
+<main>
+    {activeTag && <h1>{activeTag.replace('-', ' ')}</h1>}
+    <p class="tags">{
+        [...tags.keys()]
+            .filter((tag) => tags.get(tag)!.length > 1)
+            .sort((a,b) => tags.get(b)!.length - tags.get(a)!.length)
+            .slice(0, 10)
+            .map((tag) =>
+                (<span class="tag"><a href={`/${baseUrl}/tag/${tag}`} class:list={{
+                    active: tag === activeTag,
+                }}>{tag.replace('-', ' ')}</a><sup>{tags.get(tag)!.length}</sup></span>)
+            )
+    }
+    <ul>
+        {
+            links.map(({url, title, comment, quote}) => (
+                    <li>
+                        { url ? <a href={url}>{title}</a> : title}
+                        {comment && <>— {comment}</>}
+                        {quote && <blockquote>{quote}</blockquote>}
+                    </li>
+            ))
+        }
+    </ul>
+</main>
+<Footer />
+</body>
+</html>
