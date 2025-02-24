@@ -19,7 +19,21 @@ allPosts.forEach(post => {
 const ruCount = allPosts.reduce((acc, post) => post.data.lang === 'ru' ? acc + 1 : acc, 0)
 const enCount = allPosts.reduce((acc, post) => post.data.lang === 'en' ? acc + 1 : acc, 0)
 
+type Props = {
+    posts: CollectionEntry<'blog'>[];
+    title: string;
+    tag?: string;
+}
+
 const {posts, title, tag} = Astro.props;
+
+const postsByYear = posts.reduce((acc, post) => {
+    const year = post.data.pubDate.getFullYear()
+    const postsInYear = acc.get(year) ?? []
+    postsInYear.push(post)
+    acc.set(year, postsInYear)
+    return acc
+}, new Map<number, CollectionEntry<'blog'>[]>())
 ---
 
 <!doctype html>
@@ -30,6 +44,11 @@ const {posts, title, tag} = Astro.props;
         main {
             width: 960px;
             padding: 0.5em 1.5em 2em;
+        }
+        section {
+            display: flex;
+            gap: .5em;
+            color: rgb(var(--gray));
         }
         ul {
             display: flex;
@@ -99,25 +118,36 @@ const {posts, title, tag} = Astro.props;
             )
         })}.
     </p>
-    <section>
-        <ul>
-            {
-                posts.map((post: any) => (
-                        <li>
-                            <a href={`/blog/${post.slug}/`}>
-                                <h4 class="title">{post.data.emoji || ''} {post.data.title}</h4>
-                                {
-                                    post.data.description &&
-                                        <p class="description">{post.data.description}</p>
-                                }
-                                <p class="date">
-                                    <FormattedDate date={post.data.pubDate} />
-                                </p>
-                            </a>
-                        </li>))
-            }
-        </ul>
-    </section>
+    {
+        [...postsByYear.keys()]
+            .sort((a, b) => b - a)
+            .map((year) => {
+                const postsInYear = postsByYear.get(year)!
+                return <section>
+                    <div>{year}</div>
+                    <ul>
+                        {
+                            postsInYear.map((post: any) => (
+                                    <li>
+                                        <a href={`/blog/${post.slug}/`}>
+                                            <h4 class="title">{post.data.emoji || ''} {post.data.title}</h4>
+                                            {
+                                                post.data.description &&
+                                                    <p class="description">{post.data.description}</p>
+                                            }
+                                            {
+                                                <p class="date">
+                                                    <FormattedDate date={post.data.pubDate} year={false} />
+                                                </p>
+                                            }
+                                        </a>
+                                    </li>)
+                            )
+                        }
+                    </ul>
+                </section>
+        })
+    }
 </main>
 <Footer />
 </body>
