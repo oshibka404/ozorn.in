@@ -2,11 +2,12 @@ import type {LinkData} from "./linksData.ts";
 
 export const projects: LinkData[] = [
     // {
-    //     url: "",
-    //     title: "",
-    //     comment: "",
-    //     quote: "",
-    //     tags: ['', ''],
+    //     url: "https",
+    //     date: "24 Feb 2025",
+    //     title: "title",
+    //     comment: "comment",
+    //     quote: "quote",
+    //     tags: ['tag', 'tag'],
     // },
     {
         title: "Debugging Javascript",
@@ -21,7 +22,7 @@ export const projects: LinkData[] = [
     },
     {
         url: "https://youtu.be/Ytjqds8gVOU",
-        video: "https://youtu.be/Ytjqds8gVOU",
+        embed: true,
         title: "SP Sessions",
         comment: "I played live at Zürich made possible by 59perlen and Petite Victory Collective",
         tags: ['music', 'event', 'live'],
