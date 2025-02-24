@@ -25,4 +25,4 @@ const {links, activeTag} = Astro.props
 
 ---
 
-<LinkFeed links={links} title={activeTag.replace('-', ' ')} activeTag={activeTag} baseUrl="projects" />
+<LinkFeed allLinks={projects} links={links} title={activeTag.replace('-', ' ')} activeTag={activeTag} baseUrl="projects" />
