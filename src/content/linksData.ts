@@ -1,7 +1,7 @@
 export interface LinkData {
     url?: string;
     embed?: boolean;
-    date?: string;
+    date: string;
     title: string;
     comment?: string;
     quote?: string;

@@ -4,13 +4,14 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import {getCollection} from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
+import {linksData} from "../content/linksData";
 
 const posts = (await getCollection('blog'))
-	.filter(post => post.data.lang === 'en')
 	.sort(
 		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 	).slice(0, 5);
+
+const links = linksData.slice(0, 5);
 ---
 
 <!doctype html>
@@ -67,6 +68,20 @@ const posts = (await getCollection('blog'))
 					<a href="/blog">more</a>
 				</div>
 				<div>
+					<h3>Latest links</h3>
+					{
+						links.map((link) => (
+							<li>
+								<a href={link.url}>{link.title}</a>{
+								link.comment &&
+								<>. {link.comment}</>
+							}
+							</li>
+						))
+					}
+					<a href="/links">more</a>
+				</div>
+				<div>
 					<h3>Latest projects</h3>
 					<ul>
 						<li>I am writing a book on debugging web applications. To be published in 2025 by <a href="https://pragprog.com">Pragmatic Programmers</a></li>
@@ -74,6 +89,7 @@ const posts = (await getCollection('blog'))
 						<li>I played live at <a href="https://youtu.be/Ytjqds8gVOU">SP Sessions</a> made possible by <a href="https://59perlen.com">59perlen</a></li>
 						<li>I released <a href="https://threecoloredsquares.bandcamp.com/track/novaya-zemlya">Novaya Zemlya</a>, equally influenced by contemporary classical and dance music</li>
 					</ul>
+					<a href="/projects">more</a>
 				</div>
 			</section>
 		</main>

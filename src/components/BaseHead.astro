@@ -18,7 +18,11 @@ const { title, description } = Astro.props;
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/png" href="/favicon.png" />
+
 <link rel="alternate" type="application/rss+xml" title={title} href={new URL("rss.xml", Astro.site)} />
+<link rel="alternate" type="application/rss+xml" title={`${title} in English`} href={new URL("rss-en.xml", Astro.site)} />
+<link rel="alternate" type="application/rss+xml" title={`${title} in Russian`} href={new URL("rss-ru.xml", Astro.site)} />
+
 <!-- <link rel="alternate" type="application/rss+xml" title={title} href={new URL("rss-ru.xml", Astro.site)} /> -->
 <meta name="generator" content={Astro.generator} />
 

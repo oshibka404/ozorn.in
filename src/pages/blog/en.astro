@@ -3,9 +3,10 @@ import { getCollection } from 'astro:content';
 import BlogFeed from "../../layouts/BlogFeed.astro";
 
 const posts = (await getCollection('blog'))
-	.sort(
-		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-	);
+    .filter(post => post.data.lang === 'en')
+    .sort(
+        (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+    );
 ---
 
 <BlogFeed posts={posts} title="Blog" />
