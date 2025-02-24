@@ -15,6 +15,12 @@ export const linksData: LinkData[] = [
     //     tags: ['', ''],
     // },
     {
+        url: "https://startacomputer.club",
+        title: "You should start a computer club in the place you live",
+        quote: "a computer club is where a group of people hang out and do computer together",
+        tags: ['tech', 'activism'],
+    },
+    {
         url: "https://goodenough.us/blog/2023-08-23-bad-ideas-are-fun/",
         title: "Bad Ideas Are Fun",
         quote: "And once you loosen up your brain by coming up with ten bad ideas, some good ideas may follow. But here's another thing: we're not great at judging if an idea is good or bad. So write all of your ideas down.",
