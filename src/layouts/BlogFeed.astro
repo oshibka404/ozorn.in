@@ -102,7 +102,7 @@ const {posts, title, tag} = Astro.props;
     <section>
         <ul>
             {
-                posts.map((post: CollectionEntry<'blog'>) => (
+                posts.map((post: any) => (
                         <li>
                             <a href={`/blog/${post.slug}/`}>
                                 <h4 class="title">{post.data.emoji || ''} {post.data.title}</h4>
