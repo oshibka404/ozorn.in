@@ -38,12 +38,22 @@ const linksByYear = links.reduce((acc, link) => {
 <head>
     <BaseHead title={`${title} — ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
     <style>
+        main {
+            width: 960px;
+            padding: 0.5em 1.5em 2em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+        .year {
+            color: rgb(var(--gray))
+        }
         .tag {
             margin-right: .25em;
         }
         .tag > a.active {
-            background-color: rgb(var(--accent-dark));
-            color: var(--white);
+            background-color: var(--accent-dark);
+            color: rgb(var(--white));
         }
         blockquote {
             font-size: 1em;
@@ -76,7 +86,7 @@ const linksByYear = links.reduce((acc, link) => {
             .sort((a,b) => tags.get(b)!.length - tags.get(a)!.length)
             .slice(0, 10)
             .map((tag) =>
-                (<span class="tag"><a href={`/${baseUrl}/tag/${tag}`} class:list={{
+                (<span class="tag"><a href={tag === activeTag ? `/${baseUrl}/` : `/${baseUrl}/tag/${tag}`} class:list={{
                     active: tag === activeTag,
                 }}>{tag.replace('-', ' ')}</a><sup>{tags.get(tag)!.length}</sup></span>)
             )
@@ -89,7 +99,7 @@ const linksByYear = links.reduce((acc, link) => {
                     const linksInYear = linksByYear.get(year)!
                     return (
                             <section>
-                                <div>{year}</div>
+                                <div class="year">{year}</div>
                                 <ul>
                                     {linksInYear.map(({url, comment, quote, title}) => (
                                             <li>

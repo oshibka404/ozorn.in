@@ -95,9 +95,9 @@ const postsByYear = posts.reduce((acc, post) => {
                 gap: 0.5em;
             }
         }
-        a.active {
-            background-color: rgb(var(--accent-dark));
-            color: var(--white);
+        .tag > a.active {
+            background-color: var(--accent-dark);
+            color: rgb(var(--white));
         }
     </style>
 </head>
@@ -112,8 +112,8 @@ const postsByYear = posts.reduce((acc, post) => {
             let conjunction = index === array.length - 2 ? ' and ' : ''
             const tagName = key.replace('-', ' ')
             return (
-                <span>
-                    <a href=`/blog/tag/${key}` class:list={{
+                <span class="tag">
+                    <a href={key === tag ? '/blog/' : `/blog/tag/${key}`} class:list={{
                         active: key === tag
                     }}>{tagName}{separator}</a><sup>{tags.get(key)}</sup>
                     {conjunction}
