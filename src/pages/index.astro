@@ -49,6 +49,7 @@ const links = linksData.slice(0, 5);
 						xmlns="http://www.w3.org/2000/svg"
 						id="portrait-svg"
 					>
+						<title>Portrait by Daria Chetvernya (@chetvernya)</title>
 						<g transform="translate(-26,-13)">
 							<path
 								style="fill:#e09cf0"
@@ -86,12 +87,20 @@ const links = linksData.slice(0, 5);
 						</g>
 					</svg>
 					<script is:inline>
+						function repaintPath(pathEl) {
+							pathEl.setAttribute('style', `fill: #${Math.round(Math.random() * 0xffffff).toString(16)}`)
+						}
 						document.addEventListener('DOMContentLoaded', () => {
 							const portrait = document.getElementById('portrait-svg');
-							portrait.addEventListener('mouseenter', () => {
+							portrait.addEventListener('click', () => {
 								for (const path of portrait.getElementsByTagName('path')) {
-									path.setAttribute('style', `fill: #${Math.round(Math.random() * 0xffffff).toString(16)}`)
+									repaintPath(path)
 								}
+							})
+							portrait.addEventListener('mousemove', () => {
+								const paths = portrait.getElementsByTagName('path')
+								const randomPath = paths[Math.floor(Math.random() * paths.length)]
+								repaintPath(randomPath)
 							})
 						})
 					</script>
