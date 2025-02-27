@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: "https://cooperlund.medium.com/the-incuriosity-engine-16bdf41e229d",
+        date: "27 February 2025",
+        title: "The Incuriosity Engine",
+        comment: "nice take on what Pirsig calls \"Lateral Knowledge\", and what I talk about a lot in my book Debugging Javascript",
+        quote: "A good teacher doesn’t give you an answer, the teacher makes you think about how to get the answer. AI fails at that, and more importantly, AI isn’t sold as a teacher.",
+        tags: ['ai', 'tech', 'essay'],
+    },
+    {
         url: "https://startacomputer.club",
         date: "24 Feb 2025",
         title: "You should start a computer club in the place you live",
