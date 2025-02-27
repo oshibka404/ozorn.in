@@ -7,7 +7,9 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "upload": "./deploy.sh",
+    "deploy": "yarn build && yarn upload"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.6",
