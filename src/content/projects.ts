@@ -51,6 +51,20 @@ export const projects: LinkData[] = [
         tags: ['music', 'release'],
     },
     {
+        url: "https://oshibka404.github.io/cellular/",
+        date: "11 Jan 2024",
+        title: "Cellular",
+        comment: "Small, fun and highly customizable ECA (elementary cellular automata) generator",
+        tags: ['web'],
+    },
+    {
+        url: "https://resonance.city",
+        date: "11 Nov 2023",
+        title: "Resonance City",
+        comment: "Music sharing platform built with Next.js, PostgreSQL and Vercel",
+        tags: ['music', 'web'],
+    },
+    {
         url: "https://www.youtube.com/watch?v=C-PYsEaGr8s",
         date: "11 Aug 2023",
         title: "Campana",
@@ -67,15 +81,22 @@ export const projects: LinkData[] = [
     {
         url: "https://synt.ozorn.in/",
         date: "22 Sep 2020",
-        title: "Synt",
-        comment: "An iOS app you can play music with even if you think you can't",
-        tags: ['faust', 'dart', 'flutter', 'ios', 'app', 'music'],
-    },
-    {
-        url: "https://synt.ozorn.in/",
-        date: "22 Sep 2020",
         title: "Cross-platform UI for Faust-based applications using Flutter",
         comment: "My talk on International Faust Conference 2020 about Faust",
         tags: ['faust', 'flutter', 'app', 'music', 'talk'],
+    },
+    {
+        url: "https://github.com/oshibka404/faust_flutter",
+        date: "28 Jun 2020",
+        title: "Faust Flutter",
+        comment: "A boilerplate template for a cross-platform audio application with DSP in Faust and UI in Dart/Flutter",
+        tags: ['faust', 'dart', 'flutter', 'ios', 'app', 'dsp']
+    },
+    {
+        url: "https://synt.ozorn.in/",
+        date: "22 May 2020",
+        title: "Synt",
+        comment: "An iOS app you can play music with even if you think you can't",
+        tags: ['faust', 'dart', 'flutter', 'ios', 'app', 'music'],
     },
 ]
