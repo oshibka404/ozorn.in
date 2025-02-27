@@ -58,17 +58,27 @@
     </svg>
     <script is:inline>
         function repaintPath(pathEl) {
-            pathEl.setAttribute('style', `fill: #${Math.round(Math.random() * 0xffffff).toString(16)}`)
+            pathEl.style.fill = `#${Math.round(Math.random() * 0xffffff).toString(16)}`
         }
         document.addEventListener('DOMContentLoaded', () => {
             const portrait = document.getElementById('portrait-svg');
-            portrait.addEventListener('click', () => {
-                for (const path of portrait.getElementsByTagName('path')) {
-                    repaintPath(path)
-                }
-            })
+            const paths = [...portrait.getElementsByTagName('path')]
+            const originalColors = paths.map(el => el.style.fill)
+
+            function restoreOriginalColors() {
+                paths.forEach((path, index) => {
+                    path.style.fill = originalColors[index]
+                })
+            }
+
+            function repaintAllPaths() {
+                paths.forEach(repaintPath)
+            }
+
+            portrait.addEventListener('mouseenter', repaintAllPaths)
+            portrait.addEventListener('mouseleave', restoreOriginalColors)
+            portrait.addEventListener('click', repaintAllPaths)
             portrait.addEventListener('mousemove', () => {
-                const paths = portrait.getElementsByTagName('path')
                 const randomPath = paths[Math.floor(Math.random() * paths.length)]
                 repaintPath(randomPath)
             })
