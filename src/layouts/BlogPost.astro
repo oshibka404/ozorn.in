@@ -1,11 +1,33 @@
 ---
+import type {CollectionEntry} from "astro:content";
+import type {MarkdownHeading} from "astro";
+import type {HeadingTree} from '../env'
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import License from '../components/License.astro';
+import TableOfContents from '../components/TableOfContents.astro';
 
-const { title, description, pubDate, updatedDate, heroImage, license, original, emoji, tags } = Astro.props;
+type Props = CollectionEntry<'blog'>['data'] & {headings: MarkdownHeading[]}
+const { title, description, pubDate, updatedDate, heroImage, license, original, emoji, tags, headings } = Astro.props;
+
+function buildHeadingsForest(headings: MarkdownHeading[]) {
+	const forest: HeadingTree[]  = [];
+	const parentHeadings = new Map();
+	headings.forEach((h) => {
+		const heading = { ...h, subheadings: [] };
+		parentHeadings.set(heading.depth, heading);
+		// Change 2 to 1 if your markdown includes your <h1>
+		if (heading.depth <= 2) {
+			forest.push(heading);
+		} else {
+			parentHeadings.get(heading.depth - 1).subheadings.push(heading);
+		}
+	});
+	return forest;
+}
+const headingsForest = buildHeadingsForest(headings)
 ---
 
 <!doctype html>
@@ -17,6 +39,8 @@ const { title, description, pubDate, updatedDate, heroImage, license, original, 
 				width: calc(100% - 2em);
 				max-width: 100%;
 				margin: 0;
+				display: flex;
+				justify-content: center;
 			}
 			.hero-image {
 				width: 100%;
@@ -64,6 +88,10 @@ const { title, description, pubDate, updatedDate, heroImage, license, original, 
 				width: 100%;
 				justify-content: space-around;
 			}
+			nav {
+				top: 0;
+				position: sticky;
+			}
 		</style>
 	</head>
 
@@ -110,6 +138,11 @@ const { title, description, pubDate, updatedDate, heroImage, license, original, 
 					)}
 				</div>
 			</article>
+			<aside>
+				<nav>
+					<TableOfContents headings={headingsForest} />
+				</nav>
+			</aside>
 		</main>
 		<Footer />
 	</body>
