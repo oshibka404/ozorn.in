@@ -1,0 +1,29 @@
+---
+import type {HeadingTree} from '../env'
+
+type Props = {headings: HeadingTree[]};
+
+const {headings} = Astro.props
+---
+<style>
+    ul {
+        list-style: none;
+        padding-left: 1em;
+    }
+    a {
+        text-decoration: none;
+        &:hover {
+            border-bottom: 1px dashed;
+        }
+    }
+</style>
+<ul>
+    {
+        headings.map((heading) => (
+            <li>
+                <a href={`#${heading.slug}`}>{heading.text}</a>
+                {heading.subheadings.length > 0 && <Astro.self headings={heading.subheadings} />}
+            </li>
+        ))
+    }
+</ul>
