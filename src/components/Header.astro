@@ -1,7 +1,12 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import SocialLinks from './SocialLinks.astro';
+import ScrollTracker from './ScrollTracker.astro';
 import { SITE_TITLE } from '../consts';
+
+type Props = {scrollTracker?: boolean}
+
+const {scrollTracker = false} = Astro.props
 ---
 
 <header>
@@ -17,6 +22,7 @@ import { SITE_TITLE } from '../consts';
 			<SocialLinks />
 		</div>
 	</nav>
+	{scrollTracker && <ScrollTracker />}
 </header>
 <style>
 	header {
@@ -24,6 +30,8 @@ import { SITE_TITLE } from '../consts';
 		padding: 0 1em;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		display: flex;
+		flex-direction: column;
 	}
 	h2 {
 		margin: 0;

@@ -1,0 +1,34 @@
+<style>
+    #scroll-tracker {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        display: none;
+    }
+
+    #scroll-tracker-progress-bar {
+        background: linear-gradient(0.25turn, #e66465, #9198e5);
+        width: 0;
+        height: 4px;
+        left: 0;
+    }
+
+</style>
+<div id="scroll-tracker"><div id="scroll-tracker-progress-bar" /></div>
+<script is:inline>
+    const trackerEl = document.getElementById("scroll-tracker")
+    trackerEl.style.display = "block"
+    const progressBarEl = document.getElementById("scroll-tracker-progress-bar")
+
+    function updateProgressBar() {
+        const maxScroll = document.body.clientHeight - document.documentElement.clientHeight;
+        const scrollProgress = Math.min(Math.max(window.scrollY / maxScroll, 0), 1)
+        progressBarEl.style.width = `${scrollProgress * 100}%`
+    }
+
+    document.addEventListener("scroll", () => {
+        window.requestAnimationFrame(() => updateProgressBar())
+    })
+</script>
