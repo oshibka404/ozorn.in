@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: "https://blog.cloudflare.com/the-project-jengo-saga-how-cloudflare-stood-up-to-a-patent-troll-and-won/",
+        date: "5 Mar 2025",
+        title: "The Project Jengo Saga",
+        comment: "How Cloudflare Stood up to a Patent Troll – and Won",
+        quote: "As we have explained previously, patent trolls benefit from a problematic incentive structure that allows them to take vague or abstract patents that they have no intention of developing and assert them as broadly as possible. Instead, these trolls collect licensing fees or settlements from companies who are otherwise trying to start a business, produce useful products, and create good jobs.",
+        tags: ['tech', 'activism'],
+    },
+    {
         url: "https://cooperlund.medium.com/the-incuriosity-engine-16bdf41e229d",
         date: "27 February 2025",
         title: "The Incuriosity Engine",
