@@ -19,6 +19,13 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: "https://freddiedeboer.substack.com/p/the-r-slur-inner-circle-and-outer",
+        date: "5 Mar 2025",
+        title: "\"The R-Slur,\" Inner Circle and Outer",
+        quote: "...a core way that the alt-right/new right/MAGA tendency grew was precisely through this kind of normative overreach on the part of progressives, the assertion of shared community expectations for language and behavior that simply weren’t actually shared. Put another way, one of the most consequential elements of the social justice era was the implication that certain language and discourse norms had been broadly accepted when they had in fact only been adopted by a small elite.",
+        tags: ["essay", "language", "politics"],
+    },
+    {
         url: "https://blog.cloudflare.com/the-project-jengo-saga-how-cloudflare-stood-up-to-a-patent-troll-and-won/",
         date: "5 Mar 2025",
         title: "The Project Jengo Saga",
