@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: "https://johnpweiss.com/blog/199949/the-day-the-muse-died",
+        date: "6 Mar 2025",
+        title: "The Day the Muse Died",
+        comment: "What should you do if what you did disappears?",
+        quote: "Someday, the muse may die in you. The thing you always loved suddenly doesn’t do it for you. If that happens, don’t panic. It might come back. But whether it does or not, try new things.",
+        tags: ["essay", "art", "human"],
+    },
+    {
         url: "https://freddiedeboer.substack.com/p/the-r-slur-inner-circle-and-outer",
         date: "5 Mar 2025",
         title: "\"The R-Slur,\" Inner Circle and Outer",
