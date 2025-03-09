@@ -51,7 +51,7 @@ const postsByYear = posts.reduce((acc, post) => {
         section {
             display: flex;
             gap: .5em;
-            color: rgb(var(--gray));
+            color: var(--pale-text-color);
         }
         ul {
             display: flex;
@@ -67,7 +67,7 @@ const postsByYear = posts.reduce((acc, post) => {
         }
         .title {
             margin: 0 .25em 0 0;
-            color: rgb(var(--black));
+            color: var(--text-color);
             line-height: 1;
         }
         .title, .description, .date {
@@ -76,19 +76,19 @@ const postsByYear = posts.reduce((acc, post) => {
             margin-right: .25em;
         }
         .description {
-            color: rgb(var(--black));
+            color: var(--text-color);
         }
         .date {
-            color: rgb(var(--gray));
+            color: var(--pale-text-color);
             white-space: nowrap;
         }
         ul li a:hover .title,
         ul li a:hover .description,
         ul li a:hover .date {
-            color: rgb(var(--accent));
+            color: var(--accent);
         }
         sup {
-            color: rgb(var(--gray));
+            color: var(--pale-text-color);
         }
         @media (max-width: 720px) {
             ul {
@@ -97,7 +97,7 @@ const postsByYear = posts.reduce((acc, post) => {
         }
         .tag > a.active {
             background-color: var(--accent-dark);
-            color: rgb(var(--white));
+            color: var(--background-color);
         }
     </style>
 </head>
