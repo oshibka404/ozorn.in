@@ -12,12 +12,19 @@ export const linksData: LinkData[] = [
     // {
     //     url: "https",
     //     embed: false,
-    //     date: "24 Feb 2025",
+    //     date: "24 Mar 2025",
     //     title: "title",
     //     comment: "comment",
     //     quote: "quote",
     //     tags: ['tag', 'tag'],
     // },
+    {
+        url: 'https://contrachrome.com',
+        date: "10 Mar 2025",
+        title: "Contra Chrome – a webcomic",
+        comment: "How Google's browser became a threat to privacy and democracy",
+        tags: ['tech', 'privacy', 'webcomic'],
+    },
     {
         url: "https://johnpweiss.com/blog/199949/the-day-the-muse-died",
         date: "6 Mar 2025",
