@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: 'https://pluralistic.net/2025/03/08/turnabout/',
+        date: "12 Mar 2025",
+        title: "Gandersauce",
+        comment: "Disruption for thee, but not for me.",
+        quote: "\"Moving fast and breaking things\" is not intrinsically amoral. There's plenty of stuff out there that needs breaking. The problem isn't disruption, per se. The problem comes when the disruptor can declare an end to history, declare themselves to be eternal kings, and block anyone from disrupting them.",
+        tags: ['tech', 'politics'],
+    },
+    {
         url: 'https://contrachrome.com',
         date: "10 Mar 2025",
         title: "Contra Chrome – a webcomic",

@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import {type LinkData} from "../content/linksData";
+import FormattedDate from "../components/FormattedDate.astro";
 
 type Props = {
     allLinks: LinkData[];
@@ -74,6 +75,13 @@ const linksByYear = links.reduce((acc, link) => {
             text-decoration: none;
             transition: 0.2s ease;
         }
+        .date {
+            display: inline;
+            font-size: 1em;
+            margin-left: .25em;
+            color: var(--pale-text-color);
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -101,11 +109,16 @@ const linksByYear = links.reduce((acc, link) => {
                             <section>
                                 <div class="year">{year}</div>
                                 <ul>
-                                    {linksInYear.map(({url, comment, quote, title}) => (
+                                    {linksInYear.map(({url, comment, quote, title, date}) => (
                                             <li>
                                                 {url ? <a href={url}>{title}</a> : title}
                                                 {comment &&
                                                         <>— {comment}</>}
+                                                {
+                                                    <p class="date">
+                                                        <FormattedDate date={new Date(date)} year={false} />
+                                                    </p>
+                                                }
                                                 {quote &&
                                                         <blockquote>{quote}</blockquote>}
                                             </li>
