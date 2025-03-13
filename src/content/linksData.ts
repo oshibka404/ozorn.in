@@ -19,6 +19,13 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: 'http://www.aaronsw.com/weblog/hatethenews',
+        date: "13 Mar 2025",
+        title: "I Hate the News - Aaron Swartz",
+        quote: "With the time people waste reading a newspaper every day, they could have read an entire book about most subjects covered and thereby learned about it with far more detail and far more impact than the daily doses they get dribbled out by the paper. But people, of course, wouldn’t read a book about most subjects covered in the paper, because most of them are simply irrelevant.",
+        tags: ['essay', 'life'],
+    },
+    {
         url: 'https://pluralistic.net/2025/03/08/turnabout/',
         date: "12 Mar 2025",
         title: "Gandersauce",
