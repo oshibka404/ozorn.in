@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: 'https://doesioshavesideloadingyet.com/#can-hobbyists-take-advantage-of-the-eus-dma-today',
+        date: "14 Mar 2025",
+        title: "Does iOS have sideloading yet?",
+        comment: "DMA (Digital Market Act) implementation",
+        quote: "Sideloading is simply the act of installing apps on your computing device that haven't been explicitly reviewed and approved by the company who made the device (or the operating system running on it).",
+        tags: ['tech', 'policy'],
+    },
+    {
         url: 'https://thebaffler.com/salvos/the-problem-with-music',
         date: "14 Mar 2025",
         title: "The Problem with Music",
