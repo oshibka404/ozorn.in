@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: 'https://thebaffler.com/salvos/the-problem-with-music',
+        date: "14 Mar 2025",
+        title: "The Problem with Music",
+        comment: "This piece from 1993 has aged too well",
+        quote: "I imagine a trench, about four feet wide and five feet deep, maybe sixty yards long, filled with runny, decaying shit. I imagine these people, some of them good friends, some of them barely acquaintances, at one end of this trench. I also imagine a faceless industry lackey at the other end, holding a fountain pen and a contract waiting to be signed.",
+        tags: ['music'],
+    },
+    {
         url: 'http://www.aaronsw.com/weblog/hatethenews',
         date: "13 Mar 2025",
         title: "I Hate the News - Aaron Swartz",
