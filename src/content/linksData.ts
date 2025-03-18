@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: 'https://en.wikipedia.org/wiki/Nomic',
+        date: "18 Mar 2025",
+        title: "Nomic",
+        comment: "a game in which changing the rules is a move.",
+        quote: "The game demonstrates that in any system where rule changes are possible, a situation may arise in which the resulting laws are contradictory or insufficient to determine what is in fact legal.",
+        tags: ['politics'],
+    },
+    {
         url: 'https://doesioshavesideloadingyet.com/#can-hobbyists-take-advantage-of-the-eus-dma-today',
         date: "14 Mar 2025",
         title: "Does iOS have sideloading yet?",
