@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: 'https://susam.net/indieweb-does-not-need-to-take-off.html',
+        date: "21 Mar 2025",
+        title: "The IndieWeb Doesn't Need to \"Take Off\"",
+        comment: "It's like saying that gardening hasn't taken off because most people buy their vegetables at the supermarket.",
+        quote: "The IndieWeb is about preserving that hacker culture where websites are crafted and hosted not for mass appeal but for the sheer joy of creation and sharing with like-minded individuals.",
+        tags: ['tech', 'essay'],
+    },
+    {
         url: 'https://en.wikipedia.org/wiki/Nomic',
         date: "18 Mar 2025",
         title: "Nomic",
