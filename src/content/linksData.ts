@@ -19,6 +19,13 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: 'https://cendyne.dev/posts/2025-03-19-vibe-coding-vs-reality.html',
+        date: "22 Mar 2025",
+        title: "\"Vibe Coding\" vs Reality",
+        quote: "The optimal technical founder for a VC is not the 10x engineer. It is someone who'll deliver enough of a product to test its fitness in the market and then succeed in raising more investment money.",
+        tags: ['tech', 'essay'],
+    },
+    {
         url: 'https://susam.net/indieweb-does-not-need-to-take-off.html',
         date: "21 Mar 2025",
         title: "The IndieWeb Doesn't Need to \"Take Off\"",
