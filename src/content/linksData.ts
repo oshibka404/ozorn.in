@@ -19,6 +19,13 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: 'https://blog.julik.nl/2025/02/the-surcharge-of-big-tech',
+        date: "27 Mar 2025",
+        title: "The Surcharge of Big Tech",
+        comment: "The delta between a Big Tech salary and an agency salary is a bullshit surcharge",
+        quote: "People who are great at working in big tech are not only able to navigate this type of environment – they are able to ship in that environment and make meaningful contributions to the business despite the inherent toxicity of it all. And be optimistic and kind while doing so.",
+        tags: ['tech', 'essay'],
+    },{
         url: 'https://cendyne.dev/posts/2025-03-19-vibe-coding-vs-reality.html',
         date: "22 Mar 2025",
         title: "\"Vibe Coding\" vs Reality",
