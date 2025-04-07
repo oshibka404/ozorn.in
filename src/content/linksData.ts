@@ -19,6 +19,13 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: 'https://gerrymcgovern.com/data-centers-contain-90-crap-data/',
+        date: "7 Apr 2025",
+        title: "Data centers contain 90% crap data",
+        quote: "The Cloud is what happens when the cost of storing data is less than the cost of figuring out what to do with the crap.",
+        tags: ['tech', 'ai'],
+    },
+    {
         url: 'https://simone.org/advertising/',
         date: "6 Apr 2025",
         title: "What if we made advertising illegal?",
