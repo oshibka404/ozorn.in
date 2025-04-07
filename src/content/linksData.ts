@@ -19,6 +19,12 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: 'https://www.seangoedecke.com/where-the-money-comes-from/',
+        date: "7 Apr 2025",
+        title: "Knowing where your engineer salary comes from",
+        tags: ['tech', 'essay'],
+    },
+    {
         url: 'https://gerrymcgovern.com/data-centers-contain-90-crap-data/',
         date: "7 Apr 2025",
         title: "Data centers contain 90% crap data",
