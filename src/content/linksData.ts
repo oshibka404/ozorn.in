@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: 'https://posthuman.blog/this-reddit-post-fried-my-brain/',
+        date: "13 Apr 2025",
+        title: "A Reddit Bot Drove Me Insane",
+        comment: "Plot for a very short Nolan movie",
+        quote: "An AI-powered bot pretending to be a human, lamenting AI-powered bots who pretend to be human, to gain human trust, so that it can covertly market AI-illustrated books. The Trojan horse of late-stage capitalism, cyberpunk dystopia and fuckity-fuck-what-the-fuck-is-going-on.",
+        tags: ['tech', 'ai'],
+    },
+    {
         url: 'https://www.seangoedecke.com/where-the-money-comes-from/',
         date: "7 Apr 2025",
         title: "Knowing where your engineer salary comes from",
