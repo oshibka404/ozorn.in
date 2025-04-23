@@ -6,6 +6,7 @@
 	--active: #ff0000;
 	--pale-text-color: #607095;
 	--gray-dark: rgb(34, 41, 57);
+	--line-height: 1.7;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +29,7 @@ body {
 	overflow-wrap: break-word;
 	background-color: var(--background-color);
 	color: var(--text-color);
-	line-height: 1.7;
+	line-height: var(--line-height);
 }
 main {
 	width: 960px;

@@ -98,13 +98,14 @@ const headingsForest = buildHeadingsForest(headings)
 				position: sticky;
 				text-align: left;
 				display: inline-block;
+				max-width: 240px;
 			}
 			@media (max-width: 1200px) {
 				.whitespace {
 					display: none;
 				}
 			}
-			@media (max-width: 1000px) {
+			@media (max-width: 960px) {
 				aside {
 					display: none;
 				}
@@ -115,10 +116,14 @@ const headingsForest = buildHeadingsForest(headings)
 	<body>
 		<Header scrollTracker={true} />
 		<main>
-			<aside>
-				<nav>
-					<TableOfContents title={`${emoji ?? ''}${title}`} headings={headingsForest} />
-				</nav>
+			<aside class={`${headingsForest.length <= 1 ? 'whitespace' : ''}`}>
+				{
+					headingsForest.length > 1 && (
+						<nav>
+							<TableOfContents title={`${emoji ?? ''}${title}`} headings={headingsForest}/>
+						</nav>
+					)
+				}
 			</aside>
 			<article>
 				<div class="hero-image">

@@ -14,29 +14,78 @@ const {headings, title} = Astro.props
             margin-block-start: 0;
             padding-left: 0;
         }
+        & li.active::before {
+            content: '';
+            position: absolute;
+            left: -0.5em;
+            height: calc(1em * var(--line-height));
+            width: 2px;
+            background-color: var(--accent);
+        }
     }
     a {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        max-width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         text-decoration: none;
         &:hover {
-            border-bottom: 1px dashed;
+            text-decoration: underline dashed;
         }
     }
 </style>
 {title ? (
     /* if `title` is present, it's the top-level header */
     <ul class="top">
-        <li><a href="#">{title}</a></li>
-        <li><Astro.self headings={headings} /></li>
+        <li id="toc-item-root">
+            <a href="#">{title}</a>
+            {
+                headings.length > 0 && <Astro.self headings={headings}/>
+            }
+        </li>
     </ul>
 ) : (
     <ul>
         {
             headings.map((heading) => (
-                    <li>
-                        <a href={`#${heading.slug}`}>{heading.text}</a>
-                        {heading.subheadings.length > 0 && <Astro.self headings={heading.subheadings} />}
-                    </li>
+                <li id={`toc-item-${heading.slug}`}>
+                    <a href={`#${heading.slug}`}>{heading.text}</a>
+                    {heading.subheadings.length > 0 && <Astro.self headings={heading.subheadings} />}
+                </li>
             ))
         }
     </ul>
 )}
+
+{title && <script is:inline defer>
+    console.log('script running')
+    window.addEventListener('load', () => {
+        const article = document.querySelector('article')
+        const headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6')
+        const headerOffsetsByHeadingId = new Map();
+        headings.forEach((heading) => {
+            headerOffsetsByHeadingId.set(heading.id || "root", heading.offsetTop)
+        })
+        const updateActiveHeadings = () => {
+            requestAnimationFrame(() => {
+                const windowScrollPosition = window.scrollY
+                const bottomOfScreen = windowScrollPosition + window.innerHeight
+                let currentHeaderId = 'root'
+                headerOffsetsByHeadingId.forEach((headerOffset, headingId) => {
+                    if (headerOffset < windowScrollPosition + 100) {
+                        currentHeaderId = headingId
+                    } if (headerOffset >= windowScrollPosition && headerOffset < bottomOfScreen) {
+                        document.getElementById('toc-item-' + headingId)?.classList.add('active')
+                    } else {
+                        document.getElementById('toc-item-' + headingId)?.classList.remove('active')
+                    }
+                })
+                document.getElementById('toc-item-' + currentHeaderId)?.classList.add('active')
+            })
+        }
+        updateActiveHeadings()
+        window.addEventListener('scroll', updateActiveHeadings)
+    })
+</script>}
