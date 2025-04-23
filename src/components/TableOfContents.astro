@@ -1,14 +1,19 @@
 ---
 import type {HeadingTree} from '../env'
 
-type Props = {headings: HeadingTree[]};
+type Props = {headings: HeadingTree[], title?: string};
 
-const {headings} = Astro.props
+const {headings, title} = Astro.props
 ---
 <style>
     ul {
         list-style: none;
         padding-left: 1em;
+
+        &.top {
+            margin-block-start: 0;
+            padding-left: 0;
+        }
     }
     a {
         text-decoration: none;
@@ -17,13 +22,21 @@ const {headings} = Astro.props
         }
     }
 </style>
-<ul>
-    {
-        headings.map((heading) => (
-            <li>
-                <a href={`#${heading.slug}`}>{heading.text}</a>
-                {heading.subheadings.length > 0 && <Astro.self headings={heading.subheadings} />}
-            </li>
-        ))
-    }
-</ul>
+{title ? (
+    /* if `title` is present, it's the top-level header */
+    <ul class="top">
+        <li><a href="#">{title}</a></li>
+        <li><Astro.self headings={headings} /></li>
+    </ul>
+) : (
+    <ul>
+        {
+            headings.map((heading) => (
+                    <li>
+                        <a href={`#${heading.slug}`}>{heading.text}</a>
+                        {heading.subheadings.length > 0 && <Astro.self headings={heading.subheadings} />}
+                    </li>
+            ))
+        }
+    </ul>
+)}

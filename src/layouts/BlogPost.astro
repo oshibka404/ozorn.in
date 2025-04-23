@@ -40,7 +40,12 @@ const headingsForest = buildHeadingsForest(headings)
 				max-width: 100%;
 				margin: 0;
 				display: flex;
+				flex-direction: row;
 				justify-content: center;
+			}
+			aside {
+				flex: 1;
+				text-align: right;
 			}
 			.hero-image {
 				width: 100%;
@@ -51,7 +56,6 @@ const headingsForest = buildHeadingsForest(headings)
 					width: auto;
 					margin: 0 auto;
 					border-radius: 12px;
-					box-shadow: var(--box-shadow);
 				}
 
 				& .hero-constraint {
@@ -90,7 +94,20 @@ const headingsForest = buildHeadingsForest(headings)
 			}
 			nav {
 				top: 0;
+				padding-top: 1em;
 				position: sticky;
+				text-align: left;
+				display: inline-block;
+			}
+			@media (max-width: 1200px) {
+				.whitespace {
+					display: none;
+				}
+			}
+			@media (max-width: 1000px) {
+				aside {
+					display: none;
+				}
 			}
 		</style>
 	</head>
@@ -98,7 +115,11 @@ const headingsForest = buildHeadingsForest(headings)
 	<body>
 		<Header scrollTracker={true} />
 		<main>
-
+			<aside>
+				<nav>
+					<TableOfContents title={`${emoji ?? ''}${title}`} headings={headingsForest} />
+				</nav>
+			</aside>
 			<article>
 				<div class="hero-image">
 					<div class="hero-constraint">
@@ -117,7 +138,7 @@ const headingsForest = buildHeadingsForest(headings)
 								)
 							}
 						</div>
-						<h1>{emoji ? `${emoji} ` : ''}{title}</h1>
+						<h1>{emoji ?? ''}{title}</h1>
 						<div class="metadata">
 							{license && <License license={license} />}
 							{original && <span>First published at <a href={original}>{(new URL(original)).hostname}</a></span>}
@@ -138,11 +159,7 @@ const headingsForest = buildHeadingsForest(headings)
 					)}
 				</div>
 			</article>
-			<aside>
-				<nav>
-					<TableOfContents headings={headingsForest} />
-				</nav>
-			</aside>
+			<aside class="whitespace"></aside>
 		</main>
 		<Footer />
 	</body>
