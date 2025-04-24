@@ -36,8 +36,8 @@ const headingsForest = buildHeadingsForest(headings)
 		<BaseHead title={title} description={description ?? ''} />
 		<style>
 			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
+				width: calc(100vw - 2em);
+				max-width: 100vw;
 				margin: 0;
 				display: flex;
 				flex-direction: row;
@@ -64,7 +64,7 @@ const headingsForest = buildHeadingsForest(headings)
 			}
 			.prose {
 				width: 720px;
-				max-width: calc(100% - 2em);
+				max-width: calc(100vw - 2em);
 				margin: auto;
 				padding: 1em;
 				color: var(--gray-dark);
