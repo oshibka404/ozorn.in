@@ -19,6 +19,21 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: "https://claytonwramsey.com/blog/prompt/",
+        date: "5 May 2025",
+        title: "I'd rather read the prompt",
+        quote: "Don’t let a computer write for you! I say this not for reasons of intellectual honesty, or for the spirit of fairness. I say this because I believe that your original thoughts are far more interesting, meaningful, and valuable than whatever a large language model can transform them into.",
+        tags: ['ai', 'essay'],
+    },
+    {
+        url: "https://blog.wouterjanleys.com/blog/no-instagram-no-privacy/",
+        date: "5 May 2025",
+        title: "No Instagram, no privacy",
+        comment: "I see it too. You live in a society and privacy is a public concern, so just quitting Instagram will not solve the privacy problem",
+        quote: "From when I was in law school, I remember it being challenging to find a simple and encompassing definition of the right to privacy. A definition that has worked for me is “being in control of what other people know about you”.",
+        tags: ['privacy', 'essay', 'tech'],
+    },
+    {
         url: 'https://posthuman.blog/this-reddit-post-fried-my-brain/',
         date: "13 Apr 2025",
         title: "A Reddit Bot Drove Me Insane",
