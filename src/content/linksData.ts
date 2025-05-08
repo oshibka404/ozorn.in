@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: "https://idiallo.com/blog/when-the-machine-stops",
+        date: "8 May 2025",
+        title: "Preparing for when the Machine Stops",
+        comment: "What Happens When System 1 (in Kahneman's Terms) Goes Offline?",
+        quote: "If we no longer struggle to learn (System 2), and no longer build intuition (System 1), we become entirely dependent on tools we don’t understand. We trade capability for convenience.",
+        tags: ['ai', 'tech', 'essay'],
+    },
+    {
         url: "https://claytonwramsey.com/blog/prompt/",
         date: "5 May 2025",
         title: "I'd rather read the prompt",
