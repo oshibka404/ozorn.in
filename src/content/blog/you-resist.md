@@ -2,7 +2,7 @@
 title: 'You are how you resist'
 description: 'What you refuse defines you more than what you accept'
 pubDate: 'Sep 14 2024'
-heroImage: '/blog-cover/you-resist.png'
+#heroImage: '/blog-cover/you-resist.png'
 original: 'https://medium.com/@oshibka404/you-are-how-you-resist-ae0f31650377'
 license: 'cc'
 emoji: '✊'
@@ -22,7 +22,7 @@ The concept and looks of Cafecito are the logical consequence of perfectly reaso
 
 I may dislike it as long as I like, but this generic minimalism is everywhere. Home interiors increasingly [look alike](https://www.instagram.com/fundamakeovers/). It’s perfectly reasonable to renovate your apartment this way: a one-style-fits-all [airspace](https://www.theguardian.com/commentisfree/2016/aug/06/hipster-aesthetic-taking-over-world) apartment is easier to sell or rent out. Both designers and home owners rather tolerate this style than enjoy it, but any other choice would probably mean money loss.
 
-![Set of minimalist interior photos, looking absurdly alike](../../blog-images/you-resist-1.webp)
+![Set of minimalist interior photos, looking absurdly alike](../../blog-images/you-resist-2.jpg)
 From “[The age of average](https://www.alexmurrell.co.uk/articles/the-age-of-average)” by Alex Murrell
 
 Just like interiors, brand identics [have converged](https://www.bloomberg.com/opinion/articles/2020-09-07/welcome-to-your-bland-new-world-of-consumer-capitalism) into the same ersatz-style called [bland](https://www.bloomberg.com/opinion/articles/2020-09-07/welcome-to-your-bland-new-world-of-consumer-capitalism), serving the needs of the average consumer and no one in particular. Consumers gradually adapt their needs to the supply, only reinforcing the effect. [Cars look the same](https://www.roadandtrack.com/car-culture/a36715409/why-does-every-new-car-look-like-every-other-new-car/). [Advertising looks the same](https://eyeondesign.aiga.org/all-advertising-looks-the-same-these-days-blame-the-moodboard/). [Movie posters look the same](https://www.boredpanda.com/movie-poster-cliches/?utm_source=google&utm_medium=organic&utm_campaign=organic), and [the movies too](https://www.experimental-history.com/p/pop-culture-has-become-an-oligopoly). [Music sounds the same](https://towardsdatascience.com/hot-or-not-analyzing-60-years-of-billboard-hot-100-data-21e1a02cf304). [Sport teams play the same](https://www.theatlantic.com/newsletters/archive/2022/10/sabermetrics-analytics-ruined-baseball-sports-music-film/671924/).
