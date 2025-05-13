@@ -9,7 +9,7 @@ tags: ['tutorial', 'coding']
 emoji: '🐇'
 lang: 'en'
 ---
-In this story we’ll guide you along the whole development process of line jumps in Miro: a feature that might seem insignificant at first glance but is essential for diagramming. Likewise, its implementation seemed trivial at first but a closer look revealed many layers of hidden complexity. We’ll show you a real example of what development process looks like in Miro, what precedes it and what goes after. We’ll tell how decisions are being made along the way and how we think about things we do in terms of business, product and technology.
+In this story we’ll guide you along the whole development process of line jumps in Miro: a feature that might seem insignificant at first glance but is essential for diagramming. Likewise, its implementation seemed trivial at first, but a closer look revealed many layers of hidden complexity. We’ll show you a real example of what a development process looks like in Miro, what precedes it and what goes after. We’ll tell how decisions are being made along the way and how we think about things we do in terms of business, product and technology.
 
 Martina was plotting an electrical diagram in Miro the other day but struggled with line crossings. The intersections were ambiguous: are the wires connected to each other, or they just pass by? In different schematic conventions the plain cross has different meanings.
 
@@ -52,7 +52,7 @@ Please don’t kill anyone, Brian! We’ve implemented it and, possibly, saved a
 
 ## Project planning
 
-It was a chill summer day when our team (Diagramming) didn’t have a big ongoing project and the leadership was figuring out the future strategy for our stream. In other words, it was perfect time to act on small annoying problems like this one. Our product manager Emil brought us the most urging feature requests from user interviews, from Miro Community and from sales. We, engineers, gathered on a call to read them through and roughly estimate in T-shirts. As you can guess, one of those features happened to be line jumps.
+It was a chill summer day when our team (Diagramming) didn’t have a big ongoing project and the leadership was figuring out the future strategy for our stream. In other words, it was a perfect time to act on small annoying problems like this one. Our product manager Emil brought us the most urging feature requests from user interviews, from Miro Community and from sales. We, engineers, gathered on a call to read them through and roughly estimate in T-shirts. As you can guess, one of those features happened to be line jumps.
 
 Some of us were not convinced that the line jumps were worth taking in or even possible given the performance issues potentially caused by the number of line intersections, given the complexity of the connector line code and the amount of legacy in its implementation. Another major objection was that our team had owned the line for only a month or two by then, which is practically nothing for such a big, complex, multi-layered widget. Some of us argued that there were lower hanging fruits that would bring us the same value. They all were fair points. And, nevertheless…
 
@@ -77,22 +77,22 @@ Tribute to [Jean-Michel Basquiat](https://www.moma.org/artists/370) by Diagrammi
 The number of questions to resolve was growing so fast that we barely kept up writing them down. Just to give you an impression, here are some of the UI/UX questions we now had to address:
 
 - Enable line jumps as a global setting or per every line?
-- Where this setting should be placed?
+- Where should this setting be placed?
 - Should we use levels of detalization for different zoom levels?
-- How should jumps over thick lines look like?
-- How do two line intersections look if they are very close to each other?
-- How should a line jump look like if it’s close to a line bend or its end?
+- What should jumps over thick lines look like?
+- How do two-line intersections look if they are very close to each other?
+- What should a line jump look like if it’s close to a line bend or its end?
 - Take two lines intersecting each other with a very acute angle. Does it still make sense to show a line jump?
-- Do the jumps have to be updated in real time as you move line?
+- Do the jumps have to be updated in real time as you move the line?
 - Do we need to implement jumps over curve lines or only straight?
-- How should a line jump behave next to a line caption (text on a line)
+- How should a line jump behave next to a line caption (text on a line)?
 - Should the jumps be enabled by default?
 
-The list is by far not exhaustive, and concerns only functional requirements. There were also non-functional, like
+The list is by far not exhaustive and concerns only functional requirements. There were also non-functional, like
 
 - Accessibility requirements: line jump size, UI elements enabling
-- Performance requirements: how many line jumps on a board we want to support? How many inside the viewport?
-- Architectural considerations: what is the data model, where is it stored, where to locate the business logic?
+- Performance requirements: how many line jumps on a board do we want to support? How many inside the viewport?
+- Architectural considerations: what is the data model, where it is stored, where to locate the business logic?
 
 And some less obvious functional requirements to keep in mind:
 
@@ -102,12 +102,12 @@ And some less obvious functional requirements to keep in mind:
 
 There were other questions farther from the code implementation:
 
-- Should we release it on its own or in pack with other line improvements?
+- Should we release it on its own or in a pack with other line improvements?
 - Marketing communications: how do we announce the feature, who does that?
 - Tutorials: what tutorials need to be updated, who does that?
 - Miro templates: do we need to update any? Who does that?
 
-Certainly, Miro has dedicated people to address most of these questions but we at least needed to make sure those people all were aware of us needing them to solve those questions.
+Certainly, Miro has people dedicated to addressing most of these questions, but we at least needed to make sure those people all were aware of us needing them to solve those questions.
 
 Thus, one deeper look revealed the whole iceberg below an initially seemingly small task. We knew that we needed to treat it as a project worth careful grooming and maybe even scope cut. Not great but way better than finding it out amid the implementation phase.
 
@@ -119,7 +119,7 @@ Software engineering is all about making decisions, and the more senior you beco
 
 ## LineJumpCalculator
 
-There was a problem. Line, just as any other board object in Miro, is an independent entity unaware of other objects. This way it can be packaged, loaded lazily, well tested, et cetera. Isolation is good. However, in order to display a jump, line has to know where it intersects another line. Therefore, it should have some information about other lines and some logic in place to check whether it intersects them. But then we would lose the independence of each line. Not good. So we decided to have an external entity able to take any lines on the board and check some of them for intersections. That was the conception of `LineJumpCalculator`.
+There was a problem. Line, just as any other board object in Miro, is an independent entity unaware of other objects. This way it can be packaged, loaded lazily, well tested, et cetera. Isolation is good. However, in order to display a jump, a line has to know where it intersects another line. Therefore, it should have some information about other lines and some logic in place to check whether it intersects them. But then we would lose the independence of each line. Not good. So we decided to have an external entity able to take any lines on the board and check some of them for intersections. That was the conception of `LineJumpCalculator`.
 
 Solution:
 
@@ -140,11 +140,11 @@ Boom (2)! Jumps are updated only for the lines you edit, so if the jump was disp
 
 At this point we just temporarily stepped back to square-time algorithm and added a `todo: n², optimise` to unblock further development. At least it worked.
 
-Later we implemented a nice logic triggering jump recalculation only for the lines you edit and the lines it intersected before edit. The rest we just don’t touch. Works fast and looks beautiful but the story is boring.
+Later we implemented a nice logic triggering jump recalculation only for the lines you edit and the lines it intersected before edit. The rest we just don’t touch. Works fast and looks beautiful, but the story is boring.
 
 ## QuadTree
 
-Our QA engineer Anna quickly found a moderately-sized board where line jumps were causing visible performance problems. We already knew the root cause even before taking a look at the board. Quadratic time complexity of the line intersection testing. Yes, we perform the intersection point calculation only if their bounding boxes intersect, but before that we need to check intersection of every line’s bounding box with every other line’s bounding box. It turned a board with 300+ lines into a laptop-heater making 100k comparisons on every mouse move. Steps to reproduce were easy:
+Our QA engineer Anna quickly found a moderately sized board where line jumps were causing visible performance problems. We already knew the root cause even before taking a look at the board. Quadratic time complexity of the line intersection testing. Yes, we perform the intersection point calculation only if their bounding boxes intersect, but before that we need to check the intersection of every line’s bounding box with every other line’s bounding box. It turned a board with 300+ lines into a laptop-heater making 100k comparisons on every mouse move. Steps to reproduce were easy:
 
 1. Select all
 2. Drag around
@@ -157,11 +157,11 @@ QuadTree is a data structure recursively partitioning two-dimensional space in q
 
 Source: [An interactive explanation of quadtrees](https://jimkang.com/quadtreevis/) by Jim Kang
 
-the benefit is that you can search objects by location in logarithmic time. The drawback is that you have to re-build this structure every time an object is added, removed or moved.
+the benefit is that you can search for objects by location in logarithmic time. The drawback is that you have to re-build this structure every time an object is added, removed or moved.
 
-In our case adopting QuadTree meant that updating 300 lines at once caused 300*log4(300) = 1200 intersection detections instead of 90,000 essentially turning lagging freezing hurting hell into a lovely smooth experience. Not bad, huh?
+In our case adopting QuadTree meant that updating 300 lines at once caused 300*log4(300) = 1200 intersection detections instead of 90,000, essentially turning lagging freezing-hurting hell into a lovely smooth experience. Not bad, huh?
 
-Next question is: how do we know if we’ve optimised it enough? Should it be 300 or 1000 lines working fine so that we can say “it’s optimised enough”? The answer was 5000. This is what the dedicated performance team told us.
+The next question is: how do we know if we’ve optimised it enough? Should it be 300 or 1000 lines working fine so that we can say “it’s optimised enough”? The answer was 5000. This is what the dedicated performance team told us.
 
 So we went further and added more optimisations. For instance, before looking for intersections, we first check for overlap of the pre-calculated bounding boxes of the lines. If they don’t overlap, we know the lines don’t intersect and continue to the next line.
 
@@ -179,9 +179,9 @@ But I still insisted that we didn’t need to do that because, I said:
 
 So, after all, we decided to scope it out, at least for the internal release.
 
-You guessed it right. On the day of the release we get a report: jumps don’t work. We’re checking the video attached to the report. Yes, there was an intersection with a curve line and the user expected them to work. We explain that, hey, we don’t support curve line intersections yet because this and that. But the next day, we get another report. And one more the next day.
+You guessed it right. On the day of the release we get a report: jumps don’t work. We’re checking the video attached to the report. Yes, there was an intersection with a curve line and the user expected them to work. We explain that, hey, we don’t support curve line intersections yet because of this and that. But the next day, we get another report. And one more the next day.
 
-I had to admit, I was wrong. We needed to fix it. But how? Who should do that? What else should we sacrifice in order to take it in? All these questions remained unanswered when the same evening Andrei sent me a Slack message: I’ve fixed the lines, and you’re not gonna believe how.
+I had to admit I was wrong. We needed to fix it. But how? Who should do that? What else should we sacrifice to take it in? All these questions remained unanswered when the same evening Andrei sent me a Slack message: I’ve fixed the lines, and you’re not going to believe how.
 
 The fix was, indeed, umm, well, let me better just show it.
 
@@ -203,6 +203,6 @@ We had a reasonable number of bug reports and design feedback, but the general r
 
 ## Conclusion
 
-There is a unique set of skills and knowledge you can acquire only leading projects. At the very least, it makes you a better engineer as you start being more considerate of the business side of things. You see first-hand who stakeholders are, and why do they hold their stakes. You realise why some things that appear important don’t ever get done as you yourself have to make decisions not to do some things. You see how much small details turn out to matter: the jumps close to one another, next to a bend, intersections of lines with a very acute angle… all these things you don’t think about until you do. And then you make them work as intended together. That’s the beauty of engineering.
+There is a unique set of skills and knowledge you can acquire only leading projects. At the very least, it makes you a better engineer as you start being more considerate of the business side of things. You see first-hand who stakeholders are, and why do they hold their stakes. You realise why some things that appear important don’t ever get done as you yourself have to make decisions not to do some things. You see how much small details matter: the jumps close to one another, next to a bend, intersections of lines with a very acute angle… all these things you don’t think about until you do. And then you make them work as intended together. That’s the beauty of engineering.
 
 _This article was originally published on [Miro Engineering](https://medium.com/miro-engineering/) blog on Medium._

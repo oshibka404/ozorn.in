@@ -10,7 +10,7 @@ emoji: '💾'
 lang: 'en'
 ---
 
-Long story short, we (Diagramming team at Miro) are shipping custom shape libraries soon. Users will be able to create their own shape packs, upload SVG icons into them, share the packs with their respective organisations and use the icons for advanced diagramming exactly in the same way as they use the native Miro shapes (e.g. AWS, Cisco, Salesforce, etc.). We've created an early iteration of the feature with fake CRUD back-end fully implemented on client-side and hereunder I'll tell how we did it and how it improved the feature delivery time.
+Long story short, we (Diagramming team at Miro) are shipping custom shape libraries soon. Users will be able to create their own shape packs, upload SVG icons into them, share the packs with their respective organisations, and use the icons for advanced diagramming exactly in the same way as they use the native Miro shapes (e.g., AWS, Cisco, Salesforce, etc.). We've created an early iteration of the feature with the fake CRUD back-end fully implemented on the client-side, and hereunder I'll tell how we did it and how it improved the feature delivery time.
 
 > Custom shape libraries is one of many impressive changes announced on the 17th of July, including, among others, [Intelligent canvas](https://miro.com/intelligent-canvas/).
 
@@ -20,7 +20,7 @@ Demo version of custom shape packs using the indexedDB as a back-end substituteM
 
 It all started during planning of custom shape packs. We knew the feature required both server and client parts, and, as all cool folks do nowadays, we decided to go [API-first](https://www.postman.com/api-first/). We created a list of endpoints and agreed on message formats with the idea to develop further both client and server in parallel.
 
-What initially seemed to be a standard CRUD, quickly turned out to be a complex server-heavy project full of external dependencies because we want to deliver only enterprise-grade solutions. We had to think of subscription plans, permission management, authorisation, matching file and board access rights, the list goes on and on. Enterprise stuff. Sophisticated stuff.
+What initially seemed to be a standard CRUD quickly turned out to be a complex server-heavy project full of external dependencies because we want to deliver only enterprise-grade solutions. We had to think of subscription plans, permission management, authorisation, matching file and board access rights; the list goes on and on. Enterprise stuff. Sophisticated stuff.
 Having understood that we wouldn't have a working server anytime soon, we looked for another way to unblock client development. We can mock the API. For instance, we can use Postman or at least hard-code some static data of the desired format. Or we could do better?
 
 What if we not just displayed test data for development purposes but provided a real, fully functional version one could actually use and even demonstrate, not just superficially test for UI bugs on static mock data? What if we added a whole another iteration of the feedback loop even before internal Miro release, using our team and a selection of interested insiders as a Customer -1 (i.e. even before the Customer 0)?
@@ -29,18 +29,18 @@ It sounded like a good idea. We'd create an in-browser backend and provide a fir
 
 ## Don't use local storage
 
-When it comes to storing data between sessions in browser, the first natural reaction is often "OK, we'll use local storage". If you resist this impulse for a moment and imagine what can go wrong, you quickly find plenty of such things:
+When it comes to storing data between sessions in a browser, the first natural reaction is often "OK, we'll use local storage." If you resist this impulse for a moment and imagine what can go wrong, you quickly find plenty of such things:
 
 * **LocalStorage is limited to 5MB per domain**, which might seem more than enough for your task, but in a large product with many moving parts you never know what other teams are up to: whether they are storing files or binary data for their features, or using local storage to manually cache documents, or maybe they did it long time ago for some subset of important users you never heard of, and forgot to clean up afterwards.
-* **LocalStorage can store only strings** and you have to rely on slow and fragile manual serialization to store anything else.
-* **LocalStorage is key-value only.** No support for even basic queries like selecting a record by field value, sorting, filtering, etc. To perform any query except "get value by its key", you'll have to iterate through all records, parse each of them and compare.
+* **LocalStorage can store only strings,** and you have to rely on slow and fragile manual serialization to store anything else.
+* **LocalStorage is key-value only.** No support for even basic queries like selecting a record by field value, sorting, filtering, etc. To perform any query except "get value by its key," you'll have to iterate through all records, parse each of them and compare.
 * **LocalStorage is synchronous** and isn't supported in workers, so whenever you access a value to either read or write, it blocks execution flow, and we're talking disk operations here, not RAM.
 
 So, a use case really suitable for local storage would be to store a single value that you aren't going to read any often, and only when no major user flow depends on the stored value being accessible. Another one would be prototyping, just because reading and writing to local storage is almost as straightforward as getting the value from a map. If you're developing a product all on your own or in a very small team where everyone knows what everyone else is doing, local storage can also be the answer.
 
 Neither of the above looks like our case. We need something else.
 
-_Of course, not all of the listed points are always relevant for your particular case, but if you notice at least one, consider a better alternative, which is…_
+_Of course, not all the listed points are always relevant for your particular case, but if you notice at least one, consider a better alternative, which is…_
 
 ### IndexedDB
 Basically, IndexedDB is the local storage made right. It's an in-browser NoSQL database suitable even for large data structures. 
@@ -131,7 +131,7 @@ If there is no IndexedDB database with the name specified in the first argument,
 
 ### Create object stores and indexes
 
-The only place where one can alter the indexedDB database structure is inside [`upgradeneeded`](https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) event handler. It is called whenever the database in the user's browser has lower version than the one specified in the second argument of `indexedDB.open()` call or doesn't exist, in which case the current version number is considered to be equal `0`.
+The only place where one can alter the indexedDB database structure is inside [`upgradeneeded`](https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event) event handler. It is called whenever the database in the user's browser has a lower version than the one specified in the second argument of `indexedDB.open()` call or doesn't exist, in which case the current version number is considered to be equal `0`.
 
 Databases are local to users and easily can become outdated. Lucky enough, indexedDB supports versioning. There are multiple approaches you can use to form the database. For instance, you can check if each particular object store exists and create them in case if they don't:
 
@@ -226,7 +226,7 @@ In a similar way, but using an index and its `getAll` method, we're implementing
 
 ### Create new elements
 
-Create, update and delete operations are very similar to each other but there are a couple of remarkable differences. Let's start with creation
+Create, update, and delete operations are very similar to each other, but there are a couple of remarkable differences. Let's start with creation
 
 ```typescript
  async createElement(collectionId: string, file: File): Promise<DemoElement> {
@@ -323,7 +323,7 @@ Probably, by now you can guess what follows next.
   })
  }
 ```
-Nothing to add here, except that we use `delete` by key. If there is no element with such key, we'll end up in the `onerror` listener.
+Nothing to add here, except that we use `delete` by key. If there is no element with such a key, we'll end up in the `onerror` listener.
 
 To delete all entries in a store at once (if you feel funky), you can call `.clear()`
 
@@ -339,4 +339,4 @@ this.db.transaction('elements', 'readwrite').objectStore('elements').clear()
 
 Also, please note that there are many useful things in indexedDB that we haven't covered in this tutorial. There are cursors, ranges, abort events, and many more. To learn about them, you can read, for instance, a [comprehensive guide on indexedDB](https://javascript.info/indexeddb) by Ilya Kantor or, needless to say, [MDN page](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB).
 
-[Stop Using localStorage!](https://medium.com/@julienetienne/stop-using-localstorage-64a6d6805da8) - Another list of mostly reasonable arguments pro et contra indexedDB vs. localStorage and some interesting bits of history, including the rise and fall of WebSQL.
+[Stop Using localStorage—!](https://medium.com/@julienetienne/stop-using-localstorage-64a6d6805da8)Another list of mostly reasonable arguments pro et contra indexedDB vs. localStorage and some interesting bits of history, including the rise and fall of WebSQL.

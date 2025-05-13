@@ -23,7 +23,7 @@ The car utopia never happened outside cheesy TV commercials, however hard the wo
 > We’ve designed car dependency into our cities quite deliberately, and car companies have influenced that. ... For as long as auto companies have existed, they have perpetuated one thing above all else: car dependency.<br/>
 > — [How automakers insidiously shaped our cities for cars](https://www.fastcompany.com/90781961/how-automakers-insidiously-shaped-our-cities-for-cars) by Elissaveta Brandon
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/n94-_yE4IeU?si=DtbH3IcLIFmUFQkG" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br/>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/n94-_yE4IeU?si=DtbH3IcLIFmUFQkG" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br/>
 
 _This beautiful promotion clip by General Motors illustrates the naïve american car-optimism of the time._
 
@@ -51,7 +51,7 @@ Obesity reduces mobility, tightening car dependence even stronger.
 
 People [keep dying because of cars](https://ourworldindata.org/data-insights/more-than-a-million-people-die-from-road-injuries-every-year); half of them are pedestrians. To be safe from drivers, pedestrians start driving cars. Then, to be safe from other drivers, they buy bigger cars, and other road users buy even bigger cars until everyone around is driving Toyota Tundra.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mQDegCqiVnU?si=uC_HnW30_C6m_FX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mQDegCqiVnU?si=uC_HnW30_C6m_FX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 There might be specific, [policy-related reasons](https://www.vox.com/future-perfect/24139147/suvs-trucks-popularity-federal-policy-pollution) for American cars to get bigger, but [new car size is growing steadily](https://www.theguardian.com/business/2024/jan/22/cars-growing-wider-europe-report) in the UK and EU just as well.
 
@@ -160,7 +160,7 @@ The protesters might have looked for outsiders like neo-Luddites or tree huggers
 
 Other countries ([including the USA](https://www.bloomberg.com/news/articles/2019-10-08/the-hidden-history-of-american-anti-car-protests)) had anti-car movements of their own, but few were as successful.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YY6PQAI4TZE?si=gF2NtoFi42hQSoXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YY6PQAI4TZE?si=gF2NtoFi42hQSoXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 They dared to call bullshit on the sales pitch. They had the courage to resist a disruptive transformation when the whole universe suggested every city to go all-in.
 
