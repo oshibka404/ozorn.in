@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: "https://drewdevault.com/2025/03/17/2025-03-17-Stop-externalizing-your-costs-on-me.html",
+        date: "23 May 2025",
+        title: "Please stop externalizing your costs directly into my face",
+        comment: "by CEO of SouceHut",
+        quote: "If you personally work on developing LLMs et al, know this: I will never work with you again, and I will remember which side you picked when the bubble bursts.",
+        tags: ['ai', 'tech', 'rant', 'enshittification'],
+    },
+    {
         url: "https://idiallo.com/blog/when-the-machine-stops",
         date: "8 May 2025",
         title: "Preparing for when the Machine Stops",
