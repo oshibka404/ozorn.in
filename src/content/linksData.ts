@@ -22,7 +22,7 @@ export const linksData: LinkData[] = [
         url: "https://shagbark.substack.com/p/how-to-live-on-432-a-month-in-america",
         date: "24 May 2025",
         title: "How to Live on $432 a Month in America",
-        quote: "II have seen, many young people today find the idea of indefinite wage labor to be a dismal one. They seem to prefer a “low-work lifestyle,” but very often, the manner of living that such a lifestyle would require is completely foreign to them.",
+        quote: "I have seen, many young people today find the idea of indefinite wage labor to be a dismal one. They seem to prefer a “low-work lifestyle,” but very often, the manner of living that such a lifestyle would require is completely foreign to them.",
         tags: ['life', 'economics', 'us'],
     },
     {

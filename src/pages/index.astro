@@ -8,6 +8,7 @@ import {getCollection} from "astro:content";
 import {linksData} from "../content/linksData";
 
 const posts = (await getCollection('blog'))
+	.filter((post) => !post.data.draft)
 	.sort(
 		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 	).slice(0, 5);

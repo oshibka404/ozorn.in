@@ -99,7 +99,7 @@ const postsByYear = posts.reduce((acc, post) => {
 <main>
     {tag && <h1>{tag.replace('-', ' ')}</h1>}
     <p>
-        I write in <a href="/blog">English</a><sup>{enCount}</sup> and <a href="/blog/ru">Russian</a><sup>{ruCount}</sup>
+        I write in <a href="/blog/en">English</a><sup>{enCount}</sup> and <a href="/blog/ru">Russian</a><sup>{ruCount}</sup>
         on topics of {[...tags.keys()].map((key, index, array) => {
             let separator = index === array.length - 1 ? '' : ','
             let conjunction = index === array.length - 2 ? ' and ' : ''

@@ -2,7 +2,7 @@
 import { type CollectionEntry, getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-    const allPosts = await getCollection('blog');
+    const allPosts = (await getCollection('blog')).filter((post) => !post.data.draft);
     const tags = new Map<string, CollectionEntry<'blog'>[]>()
 
     allPosts.forEach(post => {
