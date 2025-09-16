@@ -19,6 +19,13 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: "https://blinry.org/50-things-with-sdr/",
+        date: "16 Sep 2025",
+        title: "Fifty Things you can do with a Software Defined Radio",
+        quote: "It’s like an invisible world that always surrounds us, and allows us to do many amazing things: It’s how radio and TV are transmitted, it’s how we communicate using Wi-Fi or our phones. And there are many more things to discover there, from all over the world.",
+        tags: ['tech', 'radio', 'diy'],
+    },
+    {
         url: "https://shagbark.substack.com/p/how-to-live-on-432-a-month-in-america",
         date: "24 May 2025",
         title: "How to Live on $432 a Month in America",
