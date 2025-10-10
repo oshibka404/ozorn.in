@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: "https://mitchellh.com/writing/building-large-technical-projects",
+        date: "10 Oct 2025",
+        title: "My Approach to Building Large Technical Projects",
+        comment: "By the author of Ghostty and ex-CEO of HachiCorp",
+        quote: "I've not found an engineer who doesn't get excited by a good demo. And the goal is to always give yourself a good demo.",
+        tags: ['tech', 'essay'],
+    },
+    {
         url: "https://blinry.org/50-things-with-sdr/",
         date: "16 Sep 2025",
         title: "Fifty Things you can do with a Software Defined Radio",
