@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: "https://seths.blog/2025/10/attention-is-a-luxury-good/",
+        date: "18 Oct 2025",
+        title: "Attention is a luxury good",
+        comment: "You can easily turn it into a mass-market trash though",
+        quote: "A Birkin bag is a luxury good, and so is reading an entire non-fiction book, listening to a public radio broadcast or attending a concert when we could stay at home and listen for free.",
+        tags: ['art', 'essay', 'human'],
+    },
+    {
         url: "https://mitchellh.com/writing/building-large-technical-projects",
         date: "10 Oct 2025",
         title: "My Approach to Building Large Technical Projects",
