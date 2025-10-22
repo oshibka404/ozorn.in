@@ -10,9 +10,9 @@ export const projects: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
-        title: "Debugging Javascript",
-        date: "1 June 2025",
-        comment: "I am writing a book on debugging web applications. To be published in 2025 by Pragmatic Programmers",
+        title: "Debugging TypeScript Applications: Build Web Apps That Don't Break",
+        date: "22 Oct 2025",
+        comment: "I am writing a book. It will be published by Pragmatic Programmers very soon",
         tags: ['book', 'writing'],
     },
     {
