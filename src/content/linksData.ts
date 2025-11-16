@@ -19,6 +19,14 @@ export const linksData: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: "https://dubroy.com/blog/reflections-on-writing-a-book/",
+        date: "26 Nov 2025",
+        title: "Reflections on Writing a Book",
+        comment: "by Patrick Dubroy, the author of \"WebAssembly from the Ground Up\". It closely matches my experience of writing \"Debugging TypeScript Applications\"",
+        quote: "When I compared this to previous writing experiences — my master’s thesis and a handful of academic papers — I realized how much value there is in having a fixed structure. Academic papers have a template and a page limit, along with many conventions that reviewers and readers expect. Within those boundaries, there’s a bit flexibility, but the overall structure is pretty fixed.",
+        tags: ['art', 'essay', 'writing'],
+    },
+    {
         url: "https://seths.blog/2025/10/attention-is-a-luxury-good/",
         date: "18 Oct 2025",
         title: "Attention is a luxury good",
