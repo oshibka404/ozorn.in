@@ -10,9 +10,10 @@ export const projects: LinkData[] = [
     //     tags: ['tag', 'tag'],
     // },
     {
+        url: "https://pragprog.com/titles/aodjs/debugging-typescript-applications/",
         title: "Debugging TypeScript Applications: Build Web Apps That Don't Break",
-        date: "22 Oct 2025",
-        comment: "I am writing a book. It will be published by Pragmatic Programmers very soon",
+        date: "2 Dec 2025",
+        comment: "I wrote a book. It is in beta via Pragmatic Programmers",
         tags: ['book', 'writing'],
     },
     {
