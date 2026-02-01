@@ -1,7 +1,7 @@
 ---
 title: "Let's write a kick drum in Faust"
-description: ''
-pubDate: 'Dec 31 2025'
+description: 'Trying to simulate a real acoustic kick drum'
+pubDate: 'Feb 1 2026'
 license: 'cc'
 tags: ['music', 'tutorial']
 emoji: '🔊'
@@ -127,7 +127,7 @@ A wooden barrel (drum body) with two sides covered by a plastic membrane (drum h
 
 This is harmonics of the string. Neat and simple.
 
-![Harmonic series on a string](../../../../../Downloads/Harmonic_series_on_a_string.gif)
+![Harmonic series on a string](../../blog-images/kick-drum/Harmonic_series_on_a_string.gif)
 
 Imagine the same, but every wave spreads in all directions across the membrane, reflexes from its edges, interferes with other reflections, excites the body of the barrel and the air in it and gets immediately excited back. Also, every part resonates on its natural frequency. Sounds like it would be insane to model, and it is. Fortunately for us, this sound is so harmonically complex and the harmonics are so randomly spread across the frequency spectrum that it sounds pretty much like a short burst of noise mixed with a quickly decaying sine-ish wave.
 
